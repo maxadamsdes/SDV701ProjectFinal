@@ -1,0 +1,14 @@
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\Test App\obj\Debug\Test App.csprojAssemblyReference.cache
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\Test App\obj\Debug\Test App.csproj.CoreCompileInputs.cache
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\Test App\bin\Debug\Test App.exe.config
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\Test App\bin\Debug\Test App.exe
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\Test App\bin\Debug\Test App.pdb
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\Test App\obj\Debug\Test App.csproj.CopyComplete
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\Test App\obj\Debug\Test App.exe
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\Test App\obj\Debug\Test App.pdb
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\Test App\bin\Debug\ArtGallery.Models.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\Test App\bin\Debug\ArtGallery.Models.pdb
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\Test App\bin\Debug\ArtGallery.RestApiClient.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\Test App\bin\Debug\Newtonsoft.Json.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\Test App\bin\Debug\ArtGallery.RestApiClient.pdb
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\Test App\bin\Debug\Newtonsoft.Json.xml

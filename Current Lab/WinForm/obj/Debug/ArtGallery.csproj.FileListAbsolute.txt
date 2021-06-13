@@ -1,0 +1,16 @@
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\bin\Debug\ArtGallery.exe.config
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\bin\Debug\ArtGallery.exe
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\bin\Debug\ArtGallery.pdb
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\obj\Debug\ArtGallery.csprojAssemblyReference.cache
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\obj\Debug\ArtGallery.ArtistForm.resources
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\obj\Debug\ArtGallery.MainForm.resources
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\obj\Debug\ArtGallery.PaintingForm.resources
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\obj\Debug\ArtGallery.PhotographForm.resources
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\obj\Debug\ArtGallery.SculptureForm.resources
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\obj\Debug\ArtGallery.WorkForm.resources
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\obj\Debug\ArtGallery.InputBox.resources
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\obj\Debug\ArtGallery.Properties.Resources.resources
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\obj\Debug\ArtGallery.csproj.GenerateResource.cache
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\obj\Debug\ArtGallery.csproj.CoreCompileInputs.cache
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\obj\Debug\ArtGallery.exe
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\obj\Debug\ArtGallery.pdb
