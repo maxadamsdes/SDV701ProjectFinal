@@ -10,3 +10,9 @@ D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\Model
 D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\Models\obj\Debug\ArtGallery.Models.dll
 D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\Models\obj\Debug\ArtGallery.Models.pdb
+D:\Documents\GitHub\SDV701Project\Current Lab\Models\bin\Debug\ArtGallery.Models.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\Models\bin\Debug\ArtGallery.Models.pdb
+D:\Documents\GitHub\SDV701Project\Current Lab\Models\obj\Debug\Models.csprojAssemblyReference.cache
+D:\Documents\GitHub\SDV701Project\Current Lab\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\SDV701Project\Current Lab\Models\obj\Debug\ArtGallery.Models.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\Models\obj\Debug\ArtGallery.Models.pdb

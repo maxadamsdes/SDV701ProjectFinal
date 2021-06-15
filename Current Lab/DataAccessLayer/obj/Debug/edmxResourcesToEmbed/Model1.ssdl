@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Gallery_DataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="Artist">
+  <EntityType Name="Category">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
@@ -9,13 +9,13 @@
     <Property Name="Speciality" Type="nvarchar" MaxLength="20" />
     <Property Name="Phone" Type="nvarchar" MaxLength="20" />
   </EntityType>
-  <EntityType Name="Work">
+  <EntityType Name="Instrument">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ArtistID" Type="int" Nullable="false" />
-    <Property Name="WorkType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="CategoryID" Type="int" Nullable="false" />
+    <Property Name="InstrumentType" Type="nvarchar" MaxLength="1" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="25" Nullable="false" />
     <Property Name="Date" Type="datetime" Nullable="false" />
     <Property Name="Value" Type="decimal" Precision="18" Scale="0" Nullable="false" />
@@ -25,24 +25,24 @@
     <Property Name="Weight" Type="real" />
     <Property Name="Material" Type="nvarchar" MaxLength="15" />
   </EntityType>
-  <Association Name="FK_Work_Artist">
-    <End Role="Artist" Type="Self.Artist" Multiplicity="1" />
-    <End Role="Work" Type="Self.Work" Multiplicity="*" />
+  <Association Name="FK_Instrument_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Instrument" Type="Self.Instrument" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Artist">
+      <Principal Role="Category">
         <PropertyRef Name="ID" />
       </Principal>
-      <Dependent Role="Work">
-        <PropertyRef Name="ArtistID" />
+      <Dependent Role="Instrument">
+        <PropertyRef Name="CategoryID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="Gallery_DataModelStoreContainer">
-    <EntitySet Name="Artist" EntityType="Self.Artist" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Work" EntityType="Self.Work" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_Work_Artist" Association="Self.FK_Work_Artist">
-      <End Role="Artist" EntitySet="Artist" />
-      <End Role="Work" EntitySet="Work" />
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Instrument" EntityType="Self.Instrument" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Instrument_Category" Association="Self.FK_Instrument_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Instrument" EntitySet="Instrument" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

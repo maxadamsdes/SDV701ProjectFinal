@@ -13,9 +13,9 @@ namespace ArtGallery.WinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Painting.LoadPaintingForm = PaintingForm.Run;
-            Photograph.LoadPhotographForm = PhotographForm.Run;
-            Sculpture.LoadSculptureForm = SculptureForm.Run;
+            Brass.LoadPaintingForm = BrassForm.Run;
+            Strings.LoadPhotographForm = StringsForm.Run;
+            Woodwind.LoadSculptureForm = WoodwindForm.Run;
             Application.Run(MainForm.Instance);
         }
     }

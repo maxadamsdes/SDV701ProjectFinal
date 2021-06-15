@@ -11,30 +11,30 @@ namespace ArtGallery.RestApiClient
     public static class RestClient
     {
         public const string Url = "http://localhost:8080";
-        public async static Task<IList<ArtistListItemModel>> ListArtistNamesAsync()
+        public async static Task<IList<CategoryListItemModel>> ListCategoryNamesAsync()
         {
             using (HttpClient httpClient = new HttpClient())
             {
                 string result = await
-                httpClient.GetStringAsync($"{Url}/api/artist/listnames");
+                httpClient.GetStringAsync($"{Url}/api/category/listnames");
                 return
-                JsonConvert.DeserializeObject<List<ArtistListItemModel>>(result);
+                JsonConvert.DeserializeObject<List<CategoryListItemModel>>(result);
             }
         }
-        public async static Task<IList<ArtistModel>> ListArtistAsync()
+        public async static Task<IList<CategoryModel>> ListCategoryAsync()
         {
             using (HttpClient httpClient = new HttpClient())
             {
-                string result = await httpClient.GetStringAsync($"{Url}/api/artist/list");
-                return JsonConvert.DeserializeObject<List<ArtistModel>>(result);
+                string result = await httpClient.GetStringAsync($"{Url}/api/category/list");
+                return JsonConvert.DeserializeObject<List<CategoryModel>>(result);
             }
         }
 
-        public async static Task<ArtistModel> GetArtistAsync(int id)
+        public async static Task<CategoryModel> GetCategoryAsync(int id)
         {
             using (HttpClient httpClient = new HttpClient())
             {
-                return JsonConvert.DeserializeObject<ArtistModel>(await httpClient.GetStringAsync($"{Url}/api/artist/get?id=" + id));
+                return JsonConvert.DeserializeObject<CategoryModel>(await httpClient.GetStringAsync($"{Url}/api/category/get?id=" + id));
             }
         }
 
@@ -49,21 +49,21 @@ namespace ArtGallery.RestApiClient
                 return Convert.ToInt32(await responseMessage.Content.ReadAsStringAsync());
             }
         }
-        public async static Task<int> AddArtistAsync(ArtistModel artist)
+        public async static Task<int> AddCategoryAsync(CategoryModel category)
         {
-            return await AddOrUpdateAsync(artist, $"{Url}/api/artist/add", "POST");
+            return await AddOrUpdateAsync(category, $"{Url}/api/category/add", "POST");
         }
 
-        public async static Task<int> UpdateArtistAsync(ArtistModel artist)
+        public async static Task<int> UpdateCategoryAsync(CategoryModel category)
         {
-            return await AddOrUpdateAsync(artist, $"{Url}/api/artist/update", "PUT");
+            return await AddOrUpdateAsync(category, $"{Url}/api/category/update", "PUT");
         }
 
-        public async static Task DeleteArtistAsync(int id)
+        public async static Task DeleteCategoryAsync(int id)
         {
             using (HttpClient httpClient = new HttpClient())
             {
-                HttpResponseMessage responseMessage = await httpClient.DeleteAsync($"{Url}/api/artist/delete?id={id}");
+                HttpResponseMessage responseMessage = await httpClient.DeleteAsync($"{Url}/api/category/delete?id={id}");
                 responseMessage.EnsureSuccessStatusCode();
             }
         }

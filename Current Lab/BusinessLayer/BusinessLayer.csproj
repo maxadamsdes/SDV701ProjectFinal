@@ -45,8 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WorkService.cs" />
-    <Compile Include="ArtistService.cs" />
+    <Compile Include="InstrumentService.cs" />
+    <Compile Include="CategoryService.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

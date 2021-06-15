@@ -20,3 +20,14 @@ D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestA
 D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApiClient\obj\Debug\RestApiClient.csproj.CopyComplete
 D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApiClient\obj\Debug\ArtGallery.RestApiClient.dll
 D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApiClient\obj\Debug\ArtGallery.RestApiClient.pdb
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApiClient\bin\Debug\ArtGallery.RestApiClient.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApiClient\bin\Debug\ArtGallery.RestApiClient.pdb
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApiClient\bin\Debug\ArtGallery.Models.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApiClient\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApiClient\bin\Debug\ArtGallery.Models.pdb
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApiClient\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApiClient\obj\Debug\RestApiClient.csprojAssemblyReference.cache
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApiClient\obj\Debug\RestApiClient.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApiClient\obj\Debug\RestApiClient.csproj.CopyComplete
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApiClient\obj\Debug\ArtGallery.RestApiClient.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApiClient\obj\Debug\ArtGallery.RestApiClient.pdb

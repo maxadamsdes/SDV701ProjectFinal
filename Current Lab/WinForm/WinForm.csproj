@@ -58,17 +58,17 @@
   <ItemGroup>
     <Compile Include="DateComparer.cs" />
     <Compile Include="NameComparer.cs" />
-    <Compile Include="Painting.cs" />
-    <Compile Include="Photograph.cs" />
-    <Compile Include="Sculpture.cs" />
+    <Compile Include="Brass.cs" />
+    <Compile Include="Strings.cs" />
+    <Compile Include="Woodwind.cs" />
     <Compile Include="Singleton.cs" />
-    <Compile Include="Work.cs" />
-    <Compile Include="WorkList.cs" />
-    <Compile Include="ArtistForm.cs">
+    <Compile Include="Instrument.cs" />
+    <Compile Include="InstrumentList.cs" />
+    <Compile Include="CategoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ArtistForm.designer.cs">
-      <DependentUpon>ArtistForm.cs</DependentUpon>
+    <Compile Include="CategoryForm.designer.cs">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -76,29 +76,29 @@
     <Compile Include="MainForm.designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PaintingForm.cs">
+    <Compile Include="BrassForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PaintingForm.designer.cs">
-      <DependentUpon>PaintingForm.cs</DependentUpon>
+    <Compile Include="BrassForm.designer.cs">
+      <DependentUpon>BrassForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PhotographForm.cs">
+    <Compile Include="StringsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PhotographForm.designer.cs">
-      <DependentUpon>PhotographForm.cs</DependentUpon>
+    <Compile Include="StringsForm.designer.cs">
+      <DependentUpon>StringsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SculptureForm.cs">
+    <Compile Include="WoodwindForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SculptureForm.designer.cs">
-      <DependentUpon>SculptureForm.cs</DependentUpon>
+    <Compile Include="WoodwindForm.designer.cs">
+      <DependentUpon>WoodwindForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WorkForm.cs">
+    <Compile Include="InstrumentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WorkForm.designer.cs">
-      <DependentUpon>WorkForm.cs</DependentUpon>
+    <Compile Include="InstrumentForm.designer.cs">
+      <DependentUpon>InstrumentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="InputBox.cs">
       <SubType>Form</SubType>
@@ -108,26 +108,33 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ArtistForm.resx">
-      <DependentUpon>ArtistForm.cs</DependentUpon>
+    <EmbeddedResource Include="CategoryForm.resx">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="PaintingForm.resx">
-      <DependentUpon>PaintingForm.cs</DependentUpon>
+    <EmbeddedResource Include="BrassForm.resx">
+      <DependentUpon>BrassForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="PhotographForm.resx">
-      <DependentUpon>PhotographForm.cs</DependentUpon>
+    <EmbeddedResource Include="StringsForm.resx">
+      <DependentUpon>StringsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="SculptureForm.resx">
-      <DependentUpon>SculptureForm.cs</DependentUpon>
+    <EmbeddedResource Include="WoodwindForm.resx">
+      <DependentUpon>WoodwindForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="WorkForm.resx">
-      <DependentUpon>WorkForm.cs</DependentUpon>
+    <EmbeddedResource Include="InstrumentForm.resx">
+      <DependentUpon>InstrumentForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="InputBox.resx">
       <DependentUpon>InputBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -167,7 +174,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_UseGlobalSettings="True" BuildVersion_StartDate="2000/1/1" BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" />
+      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2000/1/1" BuildVersion_UseGlobalSettings="True" BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

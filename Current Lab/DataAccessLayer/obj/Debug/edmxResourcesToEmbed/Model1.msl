@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="Gallery_DataModelStoreContainer" CdmEntityContainer="ModelContext">
-    <EntitySetMapping Name="Artists">
-      <EntityTypeMapping TypeName="Gallery_DataModel.Artist">
-        <MappingFragment StoreEntitySet="Artist">
+    <EntitySetMapping Name="Categorys">
+      <EntityTypeMapping TypeName="Gallery_DataModel.Category">
+        <MappingFragment StoreEntitySet="Category">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Speciality" ColumnName="Speciality" />
@@ -11,12 +11,12 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Works">
-      <EntityTypeMapping TypeName="Gallery_DataModel.Work">
-        <MappingFragment StoreEntitySet="Work">
+    <EntitySetMapping Name="Instruments">
+      <EntityTypeMapping TypeName="Gallery_DataModel.Instrument">
+        <MappingFragment StoreEntitySet="Instrument">
           <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="ArtistID" ColumnName="ArtistID" />
-          <ScalarProperty Name="WorkType" ColumnName="WorkType" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="InstrumentType" ColumnName="InstrumentType" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Date" ColumnName="Date" />
           <ScalarProperty Name="Value" ColumnName="Value" />

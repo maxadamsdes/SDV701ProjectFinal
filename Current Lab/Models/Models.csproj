@@ -42,11 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArtistListItemModel.cs" />
-    <Compile Include="ArtistModel.cs" />
+    <Compile Include="CategoryListItemModel.cs" />
+    <Compile Include="CategoryModel.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WorkModel.cs" />
+    <Compile Include="InstrumentModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

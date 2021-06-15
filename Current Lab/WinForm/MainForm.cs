@@ -23,7 +23,7 @@ namespace ArtGallery.WinForm
             get { return _instance; }
         }
 
-        //private ArtistList _artistList = new ArtistList();
+        //private CategoryList _categoryList = new CategoryList();
         public delegate void Notify(string galleryName);
         public event Notify GalleryNameChanged;
 
@@ -37,10 +37,10 @@ namespace ArtGallery.WinForm
         {
             try
             {
-                artistList.DataSource = null;
-                artistList.ValueMember = "ID";
-                artistList.DisplayMember = "Name";
-                artistList.DataSource = await RestClient.ListArtistNamesAsync();
+                categoryList.DataSource = null;
+                categoryList.ValueMember = "ID";
+                categoryList.DisplayMember = "Name";
+                categoryList.DataSource = await RestClient.ListCategoryNamesAsync();
             }
             catch (Exception ex)
             {
@@ -48,31 +48,31 @@ namespace ArtGallery.WinForm
             }
 
             
-            //string[] displayList = new string[_artistList.Count];
-            //_artistList.Keys.CopyTo(displayList, 0);
-            //artistList.DataSource = displayList;
-            //laueLabel.Text = Convert.ToString(_artistList.GetTotalValue());
+            //string[] displayList = new string[_categoryList.Count];
+            //_categoryList.Keys.CopyTo(displayList, 0);
+            //categoryList.DataSource = displayList;
+            //laueLabel.Text = Convert.ToString(_categoryList.GetTotalValue());
         }
 
         private void addButton_Click(object sender, EventArgs e)
         {
             try
             {
-                ArtistForm.Run(null);
+                CategoryForm.Run(null);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error adding new artist");
+                MessageBox.Show(ex.Message, "Error adding new category");
             }
         }
 
-        private void artistList_DoubleClick(object sender, EventArgs e)
+        private void categoryList_DoubleClick(object sender, EventArgs e)
         {
-            var artistID = (int?)artistList.SelectedItem;
-            if (artistID != null)
+            var categoryID = (int?)categoryList.SelectedItem;
+            if (categoryID != null)
                 try
                 {
-                    ArtistForm.Run(artistID);
+                    CategoryForm.Run(categoryID);
                 }
                 catch (Exception ex)
                 {
@@ -84,7 +84,7 @@ namespace ArtGallery.WinForm
         {
             try
             {
-                //_artistList.Save();
+                //_categoryList.Save();
             }
             catch (Exception ex)
             {
@@ -95,21 +95,21 @@ namespace ArtGallery.WinForm
 
         private async void deleteButton_Click(object sender, EventArgs e)
         {
-            var artistID = (int?)artistList.SelectedValue;
-            if (artistID != null && MessageBox.Show("Are you sure?", "Deleting artist", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            var categoryID = (int?)categoryList.SelectedValue;
+            if (categoryID != null && MessageBox.Show("Are you sure?", "Deleting category", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
-                    int id = (int)artistList.SelectedValue;
-                    await RestClient.DeleteArtistAsync(id);
-                    //_artistList.Remove(key);
-                    artistList.ClearSelected();
+                    int id = (int)categoryList.SelectedValue;
+                    await RestClient.DeleteCategoryAsync(id);
+                    //_categoryList.Remove(key);
+                    categoryList.ClearSelected();
                     UpdateDisplay();
 
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Error deleing artist");
+                    MessageBox.Show(ex.Message, "Error deleing category");
                 }
             }
         }
@@ -118,7 +118,7 @@ namespace ArtGallery.WinForm
         {
             try
             {
-                //_artistList = ArtistList.RetrieveArtistList();
+                //_categoryList = CategoryList.RetrieveCategoryList();
 
             }
             catch (Exception ex)
@@ -127,13 +127,13 @@ namespace ArtGallery.WinForm
             }
             UpdateDisplay();
             GalleryNameChanged += UpdateTitle;
-            //GalleryNameChanged(_artistList.GalleryName);
+            //GalleryNameChanged(_categoryList.GalleryName);
         }
 
         private void galleryNameButton_Click(object sender, EventArgs e)
         {
-            //_artistList.GalleryName = new InputBox("Enter Gallery Name").Answer;
-            //GalleryNameChanged(_artistList.GalleryName);
+            //_categoryList.GalleryName = new InputBox("Enter Gallery Name").Answer;
+            //GalleryNameChanged(_categoryList.GalleryName);
         }
 
 

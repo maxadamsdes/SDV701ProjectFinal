@@ -7,35 +7,35 @@ namespace ArtGallery.DataAccessLayer.Test_App
     {
         static void Main(string[] args)
         {
-            //using (var unitOfWork = new UnitOfWork())
+            //using (var unitOfInstrument = new UnitOfInstrument())
             //{
-            //    var artistRepository = unitOfWork.ArtistRepository;
-            //    var artists = artistRepository.List();
-            //    foreach(Artist artist in artists)
+            //    var categoryRepository = unitOfInstrument.CategoryRepository;
+            //    var categorys = categoryRepository.List();
+            //    foreach(Category category in categorys)
             //    {
-            //        Console.WriteLine(artist.Name);
+            //        Console.WriteLine(category.Name);
             //    }
 
             //}
             //Console.ReadKey();
 
-            GetArtistNames();
+            GetCategoryNames();
             Console.ReadKey();
         }
-        public static async void GetArtistNames()
+        public static async void GetCategoryNames()
         {
-            var artists = await RestClient.ListArtistNamesAsync();
-            foreach (var artist in artists)
+            var categorys = await RestClient.ListCategoryNamesAsync();
+            foreach (var category in categorys)
             {
-                Console.WriteLine(artist.Name);
+                Console.WriteLine(category.Name);
             }
-            if (artists.Count > 0)
+            if (categorys.Count > 0)
             {
-                var artist = await RestClient.GetArtistAsync(artists[0].ID);
-                artist.Phone = "1234";
+                var category = await RestClient.GetCategoryAsync(categorys[0].ID);
+                category.Phone = "1234";
                 try
                 {
-                    await RestClient.UpdateArtistAsync(artist);
+                    await RestClient.UpdateCategoryAsync(category);
                 }
                 catch (Exception ex)
                 {
