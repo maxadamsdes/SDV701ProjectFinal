@@ -1,0 +1,122 @@
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\Gallery_Data.mdf
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\Gallery_Data_log.ldf
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\ArtGallery.RestApi.exe.config
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\ArtGallery.RestApi.exe
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\ArtGallery.RestApi.pdb
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\ArtGallery.BusinessLayer.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\ArtGallery.DataAccessLayer.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\ArtGallery.Models.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\Newtonsoft.Json.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\System.Web.Http.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\System.Web.Http.SelfHost.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\AutoMapper.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\EntityFramework.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\ArtGallery.BusinessLayer.pdb
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\ArtGallery.DataAccessLayer.pdb
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\ArtGallery.DataAccessLayer.dll.config
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\ArtGallery.Models.pdb
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\Newtonsoft.Json.xml
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\System.Web.Http.xml
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\System.Web.Http.SelfHost.xml
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\AutoMapper.xml
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\EntityFramework.xml
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\obj\Debug\RestApi.csprojAssemblyReference.cache
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\obj\Debug\RestApi.csproj.CoreCompileInputs.cache
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\obj\Debug\RestApi.csproj.CopyComplete
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\obj\Debug\ArtGallery.RestApi.exe
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\RestApi\obj\Debug\ArtGallery.RestApi.pdb
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\Gallery_Data.mdf
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\Gallery_Data_log.ldf
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\ArtGallery.RestApi.exe.config
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\ArtGallery.RestApi.exe
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\ArtGallery.RestApi.pdb
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\ArtGallery.BusinessLayer.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\ArtGallery.DataAccessLayer.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\ArtGallery.Models.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\System.Net.Http.Formatting.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\System.Web.Http.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\System.Web.Http.SelfHost.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\AutoMapper.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\EntityFramework.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\ArtGallery.BusinessLayer.pdb
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\ArtGallery.DataAccessLayer.pdb
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\ArtGallery.DataAccessLayer.dll.config
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\ArtGallery.Models.pdb
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\System.Net.Http.Formatting.xml
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\System.Web.Http.xml
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\System.Web.Http.SelfHost.xml
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\AutoMapper.xml
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\EntityFramework.xml
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\fr\EntityFramework.resources.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\obj\Debug\RestApi.csprojAssemblyReference.cache
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\obj\Debug\RestApi.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\obj\Debug\RestApi.csproj.CopyComplete
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\obj\Debug\ArtGallery.RestApi.exe
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\RestApi\obj\Debug\ArtGallery.RestApi.pdb
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\ArtGallery.RestApi.exe.config
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\ArtGallery.RestApi.exe
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\ArtGallery.RestApi.pdb
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\ArtGallery.BusinessLayer.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\ArtGallery.DataAccessLayer.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\ArtGallery.Models.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\System.Net.Http.Formatting.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\System.Web.Http.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\System.Web.Http.SelfHost.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\AutoMapper.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\EntityFramework.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\ArtGallery.BusinessLayer.pdb
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\ArtGallery.DataAccessLayer.pdb
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\ArtGallery.DataAccessLayer.dll.config
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\ArtGallery.Models.pdb
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\System.Net.Http.Formatting.xml
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\System.Web.Http.xml
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\System.Web.Http.SelfHost.xml
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\AutoMapper.xml
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\EntityFramework.xml
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\bin\Debug\fr\EntityFramework.resources.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\obj\Debug\RestApi.csprojAssemblyReference.cache
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\obj\Debug\RestApi.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\obj\Debug\RestApi.csproj.CopyComplete
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\obj\Debug\ArtGallery.RestApi.exe
+D:\Documents\GitHub\SDV701Project\Current Lab\RestApi\obj\Debug\ArtGallery.RestApi.pdb
+D:\Documents\GitHub\SDV701Project\Project\RestApi\obj\Debug\RestApi.csprojAssemblyReference.cache
+D:\Documents\GitHub\SDV701Project\Project\RestApi\obj\Debug\RestApi.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\SDV701Project\Project\RestApi\obj\Debug\InstrumentShop.RestApi.exe
+D:\Documents\GitHub\SDV701Project\Project\RestApi\obj\Debug\InstrumentShop.RestApi.pdb
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\InstrumentShop.RestApi.exe.config
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\InstrumentShop.RestApi.exe
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\InstrumentShop.RestApi.pdb
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\InstrumentShop.BusinessLayer.dll
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\InstrumentShop.DataAccessLayer.dll
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\InstrumentShop.Models.dll
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\System.Net.Http.Formatting.dll
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\System.Web.Http.dll
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\System.Web.Http.SelfHost.dll
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\AutoMapper.dll
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\EntityFramework.dll
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\InstrumentShop.BusinessLayer.pdb
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\InstrumentShop.DataAccessLayer.pdb
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\InstrumentShop.DataAccessLayer.dll.config
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\InstrumentShop.Models.pdb
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\System.Net.Http.Formatting.xml
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\System.Web.Http.xml
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\System.Web.Http.SelfHost.xml
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\AutoMapper.xml
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\EntityFramework.xml
+D:\Documents\GitHub\SDV701Project\Project\RestApi\bin\Debug\fr\EntityFramework.resources.dll
+D:\Documents\GitHub\SDV701Project\Project\RestApi\obj\Debug\RestApi.csproj.CopyComplete

@@ -1,0 +1,60 @@
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\DataAccessLayer\bin\Debug\Gallery_Data.mdf
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\DataAccessLayer\bin\Debug\Gallery_Data_log.ldf
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\DataAccessLayer\bin\Debug\ArtGallery.DataAccessLayer.dll.config
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\DataAccessLayer\bin\Debug\ArtGallery.DataAccessLayer.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\DataAccessLayer\bin\Debug\ArtGallery.DataAccessLayer.pdb
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\DataAccessLayer\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\DataAccessLayer\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\DataAccessLayer\obj\Debug\ArtGallery.DataAccessLayer.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\DataAccessLayer\obj\Debug\ArtGallery.DataAccessLayer.pdb
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\DataAccessLayer\bin\Debug\Gallery_Data.mdf
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\DataAccessLayer\bin\Debug\Gallery_Data_log.ldf
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\DataAccessLayer\bin\Debug\ArtGallery.DataAccessLayer.dll.config
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\DataAccessLayer\bin\Debug\ArtGallery.DataAccessLayer.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\DataAccessLayer\bin\Debug\ArtGallery.DataAccessLayer.pdb
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\DataAccessLayer\bin\Debug\EntityFramework.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\DataAccessLayer\bin\Debug\EntityFramework.xml
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\DataAccessLayer\bin\Debug\fr\EntityFramework.resources.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\DataAccessLayer\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\DataAccessLayer\obj\Debug\ArtGallery.DataAccessLayer.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\DataAccessLayer\obj\Debug\ArtGallery.DataAccessLayer.pdb
+D:\Documents\GitHub\SDV701Project\Current Lab\DataAccessLayer\bin\Debug\ArtGallery.DataAccessLayer.dll.config
+D:\Documents\GitHub\SDV701Project\Current Lab\DataAccessLayer\bin\Debug\ArtGallery.DataAccessLayer.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\DataAccessLayer\bin\Debug\ArtGallery.DataAccessLayer.pdb
+D:\Documents\GitHub\SDV701Project\Current Lab\DataAccessLayer\bin\Debug\EntityFramework.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\DataAccessLayer\bin\Debug\EntityFramework.xml
+D:\Documents\GitHub\SDV701Project\Current Lab\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\GitHub\SDV701Project\Current Lab\DataAccessLayer\bin\Debug\fr\EntityFramework.resources.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\DataAccessLayer\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+D:\Documents\GitHub\SDV701Project\Current Lab\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\SDV701Project\Current Lab\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+D:\Documents\GitHub\SDV701Project\Current Lab\DataAccessLayer\obj\Debug\ArtGallery.DataAccessLayer.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\DataAccessLayer\obj\Debug\ArtGallery.DataAccessLayer.pdb
+D:\Documents\GitHub\SDV701Project\Project\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+D:\Documents\GitHub\SDV701Project\Project\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\SDV701Project\Project\DataAccessLayer\obj\Debug\InstrumentShop.DataAccessLayer.dll
+D:\Documents\GitHub\SDV701Project\Project\DataAccessLayer\obj\Debug\InstrumentShop.DataAccessLayer.pdb
+D:\Documents\GitHub\SDV701Project\Project\DataAccessLayer\bin\Debug\InstrumentShop.DataAccessLayer.dll.config
+D:\Documents\GitHub\SDV701Project\Project\DataAccessLayer\bin\Debug\InstrumentShop.DataAccessLayer.dll
+D:\Documents\GitHub\SDV701Project\Project\DataAccessLayer\bin\Debug\InstrumentShop.DataAccessLayer.pdb
+D:\Documents\GitHub\SDV701Project\Project\DataAccessLayer\bin\Debug\EntityFramework.dll
+D:\Documents\GitHub\SDV701Project\Project\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\GitHub\SDV701Project\Project\DataAccessLayer\bin\Debug\EntityFramework.xml
+D:\Documents\GitHub\SDV701Project\Project\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\GitHub\SDV701Project\Project\DataAccessLayer\bin\Debug\fr\EntityFramework.resources.dll
+D:\Documents\GitHub\SDV701Project\Project\DataAccessLayer\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+D:\Documents\GitHub\SDV701Project\Project\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete

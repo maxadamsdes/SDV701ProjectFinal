@@ -1,0 +1,6 @@
+D:\Documents\GitHub\SDV701Project\Project\Models\bin\Debug\InstrumentShop.Models.dll
+D:\Documents\GitHub\SDV701Project\Project\Models\bin\Debug\InstrumentShop.Models.pdb
+D:\Documents\GitHub\SDV701Project\Project\Models\obj\Debug\Models.csprojAssemblyReference.cache
+D:\Documents\GitHub\SDV701Project\Project\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\SDV701Project\Project\Models\obj\Debug\InstrumentShop.Models.dll
+D:\Documents\GitHub\SDV701Project\Project\Models\obj\Debug\InstrumentShop.Models.pdb

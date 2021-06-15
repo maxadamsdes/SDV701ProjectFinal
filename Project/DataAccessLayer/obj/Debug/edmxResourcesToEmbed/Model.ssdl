@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Shop_DataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="Instrument">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="PricePerItem" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="LastModified" Type="datetime" Nullable="false" />
+    <Property Name="QuantityLeft" Type="int" />
+    <Property Name="Condition" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="BusinessSpecificDetail" Type="nvarchar" MaxLength="1" />
+  </EntityType>
+  <Association Name="FK_Instrument_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Instrument" Type="Self.Instrument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Instrument">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Shop_DataModelStoreContainer">
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Instrument" EntityType="Self.Instrument" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Instrument_Category" Association="Self.FK_Instrument_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Instrument" EntitySet="Instrument" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

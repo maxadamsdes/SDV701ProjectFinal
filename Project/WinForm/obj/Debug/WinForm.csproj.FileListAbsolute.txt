@@ -1,0 +1,116 @@
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\bin\Debug\ArtGallery.WinForm.exe.config
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\bin\Debug\ArtGallery.WinForm.exe
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\bin\Debug\ArtGallery.WinForm.pdb
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\bin\Debug\EntityFramework.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\bin\Debug\EntityFramework.xml
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\obj\Debug\WinForm.csprojAssemblyReference.cache
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.Properties.Resources.resources
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\obj\Debug\WinForm.csproj.GenerateResource.cache
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\obj\Debug\WinForm.csproj.CoreCompileInputs.cache
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\obj\Debug\WinForm.csproj.CopyComplete
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.exe
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.pdb
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.ArtistForm.resources
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.MainForm.resources
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.PaintingForm.resources
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.PhotographForm.resources
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.SculptureForm.resources
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.WorkForm.resources
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.InputBox.resources
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\bin\Debug\ArtGallery.Models.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\bin\Debug\ArtGallery.RestApiClient.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\bin\Debug\Newtonsoft.Json.dll
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\bin\Debug\ArtGallery.Models.pdb
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\bin\Debug\ArtGallery.RestApiClient.pdb
+C:\Users\maxad\OneDrive\NMIT\Sem1 2021\SDV701\Labs\Current Lab\WinForm\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\obj\Debug\WinForm.csprojAssemblyReference.cache
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.ArtistForm.resources
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.MainForm.resources
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.PaintingForm.resources
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.PhotographForm.resources
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.SculptureForm.resources
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.WorkForm.resources
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.InputBox.resources
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.Properties.Resources.resources
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\obj\Debug\WinForm.csproj.GenerateResource.cache
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\obj\Debug\WinForm.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.exe
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.pdb
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\bin\Debug\ArtGallery.WinForm.exe.config
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\bin\Debug\ArtGallery.WinForm.exe
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\bin\Debug\ArtGallery.WinForm.pdb
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\bin\Debug\ArtGallery.Models.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\bin\Debug\ArtGallery.RestApiClient.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\bin\Debug\EntityFramework.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\bin\Debug\ArtGallery.Models.pdb
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\bin\Debug\ArtGallery.RestApiClient.pdb
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\bin\Debug\EntityFramework.xml
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\bin\Debug\fr\EntityFramework.resources.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+D:\Documents\GitHub\WEB701_Assignment2_MaxAdams\ArtGalleryLabs\Current Lab\WinForm\obj\Debug\WinForm.csproj.CopyComplete
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\bin\Debug\ArtGallery.WinForm.exe.config
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\bin\Debug\ArtGallery.WinForm.exe
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\bin\Debug\ArtGallery.WinForm.pdb
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\bin\Debug\ArtGallery.Models.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\bin\Debug\ArtGallery.RestApiClient.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\bin\Debug\EntityFramework.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\bin\Debug\ArtGallery.Models.pdb
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\bin\Debug\ArtGallery.RestApiClient.pdb
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\bin\Debug\EntityFramework.xml
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\bin\Debug\fr\EntityFramework.resources.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\obj\Debug\WinForm.csprojAssemblyReference.cache
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.CategoryForm.resources
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.MainForm.resources
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.BrassForm.resources
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.StringsForm.resources
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.WoodwindForm.resources
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.InstrumentForm.resources
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.InputBox.resources
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.Properties.Resources.resources
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\obj\Debug\WinForm.csproj.GenerateResource.cache
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\obj\Debug\WinForm.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\obj\Debug\WinForm.csproj.CopyComplete
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.exe
+D:\Documents\GitHub\SDV701Project\Current Lab\WinForm\obj\Debug\ArtGallery.WinForm.pdb
+D:\Documents\GitHub\SDV701Project\Project\WinForm\bin\Debug\EntityFramework.dll
+D:\Documents\GitHub\SDV701Project\Project\WinForm\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\GitHub\SDV701Project\Project\WinForm\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\GitHub\SDV701Project\Project\WinForm\bin\Debug\EntityFramework.xml
+D:\Documents\GitHub\SDV701Project\Project\WinForm\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\GitHub\SDV701Project\Project\WinForm\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\GitHub\SDV701Project\Project\WinForm\bin\Debug\fr\EntityFramework.resources.dll
+D:\Documents\GitHub\SDV701Project\Project\WinForm\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+D:\Documents\GitHub\SDV701Project\Project\WinForm\obj\Debug\WinForm.csprojAssemblyReference.cache
+D:\Documents\GitHub\SDV701Project\Project\WinForm\obj\Debug\WinForm.csproj.GenerateResource.cache
+D:\Documents\GitHub\SDV701Project\Project\WinForm\obj\Debug\WinForm.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\SDV701Project\Project\WinForm\obj\Debug\WinForm.csproj.CopyComplete
+D:\Documents\GitHub\SDV701Project\Project\WinForm\bin\Debug\InstrumentShop.WinForm.exe.config
+D:\Documents\GitHub\SDV701Project\Project\WinForm\bin\Debug\InstrumentShop.WinForm.exe
+D:\Documents\GitHub\SDV701Project\Project\WinForm\bin\Debug\InstrumentShop.WinForm.pdb
+D:\Documents\GitHub\SDV701Project\Project\WinForm\bin\Debug\InstrumentShop.Models.dll
+D:\Documents\GitHub\SDV701Project\Project\WinForm\bin\Debug\InstrumentShop.RestApiClient.dll
+D:\Documents\GitHub\SDV701Project\Project\WinForm\bin\Debug\InstrumentShop.Models.pdb
+D:\Documents\GitHub\SDV701Project\Project\WinForm\bin\Debug\InstrumentShop.RestApiClient.pdb
+D:\Documents\GitHub\SDV701Project\Project\WinForm\obj\Debug\InstrumentShop.WinForm.CategoryForm.resources
+D:\Documents\GitHub\SDV701Project\Project\WinForm\obj\Debug\InstrumentShop.WinForm.MainForm.resources
+D:\Documents\GitHub\SDV701Project\Project\WinForm\obj\Debug\InstrumentShop.WinForm.BrassForm.resources
+D:\Documents\GitHub\SDV701Project\Project\WinForm\obj\Debug\InstrumentShop.WinForm.StringsForm.resources
+D:\Documents\GitHub\SDV701Project\Project\WinForm\obj\Debug\InstrumentShop.WinForm.WoodwindForm.resources
+D:\Documents\GitHub\SDV701Project\Project\WinForm\obj\Debug\InstrumentShop.WinForm.InstrumentForm.resources
+D:\Documents\GitHub\SDV701Project\Project\WinForm\obj\Debug\InstrumentShop.WinForm.InputBox.resources
+D:\Documents\GitHub\SDV701Project\Project\WinForm\obj\Debug\InstrumentShop.WinForm.Properties.Resources.resources
+D:\Documents\GitHub\SDV701Project\Project\WinForm\obj\Debug\InstrumentShop.WinForm.exe
+D:\Documents\GitHub\SDV701Project\Project\WinForm\obj\Debug\InstrumentShop.WinForm.pdb
