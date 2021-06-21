@@ -36,7 +36,7 @@ namespace InstrumentShop.RestApi
             HttpSelfHostServer server = new HttpSelfHostServer(config);
             // Start listening
             server.OpenAsync().Wait();
-            Console.WriteLine("Gallery Web-API Self hosted on " + _baseAddress);
+            Console.WriteLine("Instrument Web-API Self hosted on " + _baseAddress);
             Console.WriteLine("Hit ENTER to exit...");
             Console.ReadLine();
             server.CloseAsync().Wait();

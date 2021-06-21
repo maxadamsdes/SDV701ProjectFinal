@@ -1,3 +1,5 @@
+using InstrumentShop.Models;
+
 namespace InstrumentShop.WinForm
 {
     public sealed partial class BrassForm : InstrumentForm
@@ -8,29 +10,24 @@ namespace InstrumentShop.WinForm
         {
         }
 
-        private BrassForm()
+        public BrassForm()
         {
             InitializeComponent();
         }
 
-        public static void Run(Brass brass)
-        {
-            _instance.SetDetails(brass);
-        }
 
-        protected override void UpdateForm()
+        protected override void UpdateDisplay()
         {
-            base.UpdateForm();
-            Brass instrument = (Brass)_instrument;
-            manufacturerText.Text = instrument.Manufacturer.ToString();
+            base.UpdateDisplay();
+            tuningText.Text = _instrument.Tuning;
         }
 
         protected override void PushData()
         {
             base.PushData();
-            Brass instrument = (Brass)_instrument;
-            instrument.Manufacturer = manufacturerText.Text;
+            _instrument.Tuning = tuningText.Text;
         }
+
         public static BrassForm Instance => _instance;
     }
 }

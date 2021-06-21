@@ -7,19 +7,8 @@ namespace InstrumentShop.DataAccessLayer.Test_App
     {
         static void Main(string[] args)
         {
-            //using (var unitOfInstrument = new UnitOfInstrument())
-            //{
-            //    var categoryRepository = unitOfInstrument.CategoryRepository;
-            //    var categorys = categoryRepository.List();
-            //    foreach(Category category in categorys)
-            //    {
-            //        Console.WriteLine(category.Name);
-            //    }
-
-            //}
-            //Console.ReadKey();
-
             GetCategoryNames();
+            GetInstrumentNames();
             Console.ReadKey();
         }
         public static async void GetCategoryNames()
@@ -27,12 +16,11 @@ namespace InstrumentShop.DataAccessLayer.Test_App
             var categorys = await RestClient.ListCategoryNamesAsync();
             foreach (var category in categorys)
             {
-                Console.WriteLine(category.Name);
+                Console.WriteLine(category.Description);
             }
             if (categorys.Count > 0)
             {
                 var category = await RestClient.GetCategoryAsync(categorys[0].ID);
-                category.Phone = "1234";
                 try
                 {
                     await RestClient.UpdateCategoryAsync(category);
@@ -44,6 +32,25 @@ namespace InstrumentShop.DataAccessLayer.Test_App
             }
         }
 
-
+        public static async void GetInstrumentNames()
+        {
+            var instruments = await RestClient.ListInstrumentNamesAsync();
+            foreach (var instrument in instruments)
+            {
+                Console.WriteLine(instrument.Description);
+            }
+            if (instruments.Count > 0)
+            {
+                var instrument = await RestClient.GetInstrumentAsync(instruments[0].ID);
+                try
+                {
+                    await RestClient.UpdateInstrumentAsync(instrument);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
     }
 }

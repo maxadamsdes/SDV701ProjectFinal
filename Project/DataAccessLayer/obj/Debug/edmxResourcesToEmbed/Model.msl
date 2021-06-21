@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Shop_DataModelStoreContainer" CdmEntityContainer="ModelContext">
+  <EntityContainerMapping StorageEntityContainer="Shop_DataModelStoreContainer" CdmEntityContainer="Entities">
     <EntitySetMapping Name="Categories">
       <EntityTypeMapping TypeName="Shop_DataModel.Category">
         <MappingFragment StoreEntitySet="Category">
@@ -19,7 +19,19 @@
           <ScalarProperty Name="LastModified" ColumnName="LastModified" />
           <ScalarProperty Name="QuantityLeft" ColumnName="QuantityLeft" />
           <ScalarProperty Name="Condition" ColumnName="Condition" />
-          <ScalarProperty Name="BusinessSpecificDetail" ColumnName="BusinessSpecificDetail" />
+          <ScalarProperty Name="Tuning" ColumnName="Tuning" />
+          <ScalarProperty Name="NumberOfStrings" ColumnName="NumberOfStrings" />
+          <ScalarProperty Name="Mouthpiece" ColumnName="Mouthpiece" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order">
+      <EntityTypeMapping TypeName="Shop_DataModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="PriceTotal" ColumnName="PriceTotal" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

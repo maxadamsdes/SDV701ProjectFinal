@@ -1,0 +1,20 @@
+﻿INSERT INTO Instrument(CategoryID,Description,PricePerItem,LastModified,QuantityLeft,Condition,BusinessSpecificDetail)
+VALUES 
+(1, 'Trumpet Bach MODEL C190SL229', 600, CURRENT_TIMESTAMP, 3, 'Used', 'C'),
+(1, 'Trumpet Bach MODEL 18043', 1800, CURRENT_TIMESTAMP, 9, 'New', 'Bb'),
+(1, 'Trumpet Yamaha YTR-9445NYS-YM', 1200, CURRENT_TIMESTAMP, 2, 'New', 'C'),
+(1, 'Trumpet Yamaha YTR-8445', 800, CURRENT_TIMESTAMP, 1, 'Used', 'C'),
+(1, 'Trumpet Schlike C3HD', 1000, CURRENT_TIMESTAMP, 4, 'Used', 'C'),
+(1, 'Trumpet Schlike G1L-4', 1800, CURRENT_TIMESTAMP, 1, 'New', 'G'),
+(1, 'Trumpet Schlike E3L', 1600, CURRENT_TIMESTAMP, 1, 'New', 'Eb & D'),
+(2, 'Viola Forenza Prima 2 Viola Outfit', 377.99, CURRENT_TIMESTAMP, 0, 'Used', '4'),
+(2, 'Viola EPIPHONE™ - VINTAGE SUNBURST', 799, CURRENT_TIMESTAMP, 0, 'New', '4'),
+(2, 'Violin CREMONA SV1340', 1800, CURRENT_TIMESTAMP, 8, 'Used', '4'),
+(2, 'Cello Tremor Stentor Conservatoire Cello', 2295, CURRENT_TIMESTAMP, 0, 'New', '4'),
+(2, 'Acoustic Guitar TAKAMINE GD11MNS', 399, CURRENT_TIMESTAMP, 5, 'Used', '6'),
+(2, 'Electric Guitar E-II ECLIPSE-7 - BLACK SATIN', 2200, CURRENT_TIMESTAMP, 2, 'Used', '6'),
+(3, 'Saxophone ANTIGUA AS4348CU-GH PRO MODEL', 3695, CURRENT_TIMESTAMP, 7, 'Used', 'Reed'),
+(3, 'Flute ALTUS 1107SRBE0S FLUTE .958', 4599, CURRENT_TIMESTAMP, 1, 'Used', 'Open Hole'),
+(3, 'Saxophone YANAGISAWA A-WO33', 9695, CURRENT_TIMESTAMP, 0, 'New', 'Reed'),
+(3, 'Clarinet BUFFET BC1102C-2-0 E13', 3395, CURRENT_TIMESTAMP, 4, 'New', 'Reed'),
+(3, 'Recorder HOHNER B9509', 2200, CURRENT_TIMESTAMP, 0, 'Used', 'Plastic');

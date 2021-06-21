@@ -4,3 +4,9 @@ D:\Documents\GitHub\SDV701Project\Project\Models\obj\Debug\Models.csprojAssembly
 D:\Documents\GitHub\SDV701Project\Project\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 D:\Documents\GitHub\SDV701Project\Project\Models\obj\Debug\InstrumentShop.Models.dll
 D:\Documents\GitHub\SDV701Project\Project\Models\obj\Debug\InstrumentShop.Models.pdb
+D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\Models\bin\Debug\InstrumentShop.Models.dll
+D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\Models\bin\Debug\InstrumentShop.Models.pdb
+D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\Models\obj\Debug\Models.csprojAssemblyReference.cache
+D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\Models\obj\Debug\InstrumentShop.Models.dll
+D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\Models\obj\Debug\InstrumentShop.Models.pdb

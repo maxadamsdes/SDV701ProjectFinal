@@ -1,3 +1,5 @@
+using InstrumentShop.Models;
+
 namespace InstrumentShop.WinForm
 {
     public sealed partial class WoodwindForm : InstrumentForm
@@ -8,28 +10,21 @@ namespace InstrumentShop.WinForm
         {
         }
 
-        private WoodwindForm()
+        public WoodwindForm()
         {
             InitializeComponent();
         }
 
-        public static void Run(Woodwind woodwind)
+        protected override void UpdateDisplay()
         {
-            _instance.SetDetails(woodwind);
-        }
-
-        protected override void UpdateForm()
-        {
-            base.UpdateForm();
-            Woodwind instrument = (Woodwind)_instrument;
-            reedText.Text = instrument.Reed.ToString();
+            base.UpdateDisplay();
+            mouthpieceText.Text = _instrument.Mouthpiece.ToString();
         }
 
         protected override void PushData()
         {
             base.PushData();
-            Woodwind instrument = (Woodwind)_instrument;
-            instrument.Reed = reedText.Text;
+            _instrument.Mouthpiece = mouthpieceText.Text;
         }
 
         public static WoodwindForm Instance => _instance;

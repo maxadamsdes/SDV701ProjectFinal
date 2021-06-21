@@ -34,13 +34,11 @@ namespace InstrumentShop.WinForm
             this.continueButton = new System.Windows.Forms.Button();
             this.Label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.categoryList = new System.Windows.Forms.DataGridView();
+            this.categoryList = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.ordersButton = new System.Windows.Forms.Button();
-            this.submitButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryList)).BeginInit();
             this.SuspendLayout();
             // 
             // vlaueLabel
@@ -78,7 +76,7 @@ namespace InstrumentShop.WinForm
             this.continueButton.Size = new System.Drawing.Size(120, 50);
             this.continueButton.TabIndex = 9;
             this.continueButton.Text = "Continue";
-            this.continueButton.Click += new System.EventHandler(this.addButton_Click);
+            this.continueButton.Click += new System.EventHandler(this.continueButton_Click);
             // 
             // Label1
             // 
@@ -102,20 +100,13 @@ namespace InstrumentShop.WinForm
             // 
             // categoryList
             // 
-            this.categoryList.AllowUserToAddRows = false;
-            this.categoryList.AllowUserToDeleteRows = false;
-            this.categoryList.AllowUserToResizeColumns = false;
-            this.categoryList.AllowUserToResizeRows = false;
-            this.categoryList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.categoryList.Location = new System.Drawing.Point(3, 32);
-            this.categoryList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.categoryList.MultiSelect = false;
+            this.categoryList.FormattingEnabled = true;
+            this.categoryList.ItemHeight = 20;
+            this.categoryList.Location = new System.Drawing.Point(4, 31);
             this.categoryList.Name = "categoryList";
-            this.categoryList.ReadOnly = true;
-            this.categoryList.RowHeadersWidth = 51;
-            this.categoryList.RowTemplate.Height = 24;
-            this.categoryList.Size = new System.Drawing.Size(397, 255);
-            this.categoryList.TabIndex = 6;
+            this.categoryList.Size = new System.Drawing.Size(395, 264);
+            this.categoryList.TabIndex = 7;
+            this.categoryList.SelectedIndexChanged += new System.EventHandler(this.categoryList_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -143,23 +134,13 @@ namespace InstrumentShop.WinForm
             this.ordersButton.Size = new System.Drawing.Size(120, 50);
             this.ordersButton.TabIndex = 16;
             this.ordersButton.Text = "Orders";
-            // 
-            // submitButton
-            // 
-            this.submitButton.Location = new System.Drawing.Point(454, 378);
-            this.submitButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(120, 34);
-            this.submitButton.TabIndex = 18;
-            this.submitButton.Text = "SetUp";
-            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
+            this.ordersButton.Click += new System.EventHandler(this.ordersButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(606, 453);
-            this.Controls.Add(this.submitButton);
+            this.ClientSize = new System.Drawing.Size(606, 388);
             this.Controls.Add(this.ordersButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.vlaueLabel);
@@ -173,7 +154,6 @@ namespace InstrumentShop.WinForm
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -186,11 +166,10 @@ namespace InstrumentShop.WinForm
         internal System.Windows.Forms.Button continueButton;
         internal System.Windows.Forms.Label Label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView categoryList;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         internal System.Windows.Forms.Button ordersButton;
-        internal System.Windows.Forms.Button submitButton;
+        private System.Windows.Forms.ListBox categoryList;
     }
 }
 

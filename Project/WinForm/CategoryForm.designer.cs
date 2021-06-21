@@ -151,14 +151,21 @@ namespace InstrumentShop.WinForm
             // 
             // instrumentList
             // 
+            this.instrumentList.AllowUserToAddRows = false;
+            this.instrumentList.AllowUserToDeleteRows = false;
+            this.instrumentList.AllowUserToResizeColumns = false;
+            this.instrumentList.AllowUserToResizeRows = false;
             this.instrumentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.instrumentList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.instrumentList.Location = new System.Drawing.Point(0, 34);
             this.instrumentList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.instrumentList.MultiSelect = false;
             this.instrumentList.Name = "instrumentList";
             this.instrumentList.RowHeadersWidth = 51;
             this.instrumentList.RowTemplate.Height = 24;
             this.instrumentList.Size = new System.Drawing.Size(682, 331);
             this.instrumentList.TabIndex = 28;
+            this.instrumentList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.instrumentList_CellClick);
             // 
             // panel1
             // 
@@ -247,6 +254,7 @@ namespace InstrumentShop.WinForm
             this.continueButton.Size = new System.Drawing.Size(96, 49);
             this.continueButton.TabIndex = 30;
             this.continueButton.Text = "Continue";
+            this.continueButton.Click += new System.EventHandler(this.continueButton_Click);
             // 
             // CategoryForm
             // 

@@ -44,11 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RestClient.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{181BACEB-A152-42BA-B104-03A3DFB89C63}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{3804962e-bd1a-47d5-9cfd-c18c79744156}</Project>
       <Name>Models</Name>

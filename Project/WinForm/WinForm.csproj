@@ -58,11 +58,12 @@
   <ItemGroup>
     <Compile Include="DateComparer.cs" />
     <Compile Include="NameComparer.cs" />
-    <Compile Include="Brass.cs" />
-    <Compile Include="Strings.cs" />
-    <Compile Include="Woodwind.cs" />
-    <Compile Include="Singleton.cs" />
-    <Compile Include="Instrument.cs" />
+    <Compile Include="OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="InstrumentList.cs" />
     <Compile Include="CategoryForm.cs">
       <SubType>Form</SubType>
@@ -119,6 +120,9 @@
     <EmbeddedResource Include="BrassForm.resx">
       <DependentUpon>BrassForm.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StringsForm.resx">
       <DependentUpon>StringsForm.cs</DependentUpon>

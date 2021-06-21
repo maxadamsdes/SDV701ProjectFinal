@@ -21,24 +21,11 @@ namespace InstrumentShop.Models
         [StringLength(10)]
         public string Condition { get; set; }
         [StringLength(20)]
-        public string Manufacturer { get; set; }
+        public string Tuning { get; set; }
         [StringLength(20)]
-        public string Reed { get; set; }
+        public int NumberOfStrings { get; set; }
         [StringLength(20)]
-        public string NumberOfStrings { get; set; }
-        public char InstrumentType { get; set; }
-        public static InstrumentModel NewInstrument(char type)
-        {
-            return new InstrumentModel()
-            {
-                InstrumentType = Char.ToUpper(type),
-                LastModified = DateTime.Now
-            };
-        }
-        public override string ToString()
-        {
-            return ID + "\t" + LastModified.ToShortDateString();
-        }
+        public string Mouthpiece { get; set; }
 
     }
 }

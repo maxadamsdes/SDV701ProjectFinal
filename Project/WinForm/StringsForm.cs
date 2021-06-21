@@ -1,3 +1,5 @@
+using InstrumentShop.Models;
+
 namespace InstrumentShop.WinForm
 {
     public sealed partial class StringsForm : InstrumentForm
@@ -8,28 +10,21 @@ namespace InstrumentShop.WinForm
         {
         }
 
-        private StringsForm()
+        public StringsForm()
         {
             InitializeComponent();
         }
 
-        public static void Run(Strings photograph)
+        protected override void UpdateDisplay()
         {
-            _instance.SetDetails(photograph);
-        }
-
-        protected override void UpdateForm()
-        {
-            base.UpdateForm();
-            Strings instrument = (Strings)_instrument;
-            stringsText.Text = instrument.NumberOfStrings.ToString();
+            base.UpdateDisplay();
+            stringsText.Text = _instrument.NumberOfStrings.ToString();
         }
 
         protected override void PushData()
         {
-            base.PushData();
-            Strings instrument = (Strings)_instrument;
-            instrument.NumberOfStrings = int.Parse(stringsText.Text);
+            base.PushData();            
+            _instrument.NumberOfStrings = int.Parse(stringsText.Text);
         }
 
         public static StringsForm Instance => _instance;

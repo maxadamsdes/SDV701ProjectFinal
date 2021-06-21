@@ -68,7 +68,7 @@ namespace InstrumentShop.RestApi
             Validate(category);
             if (!ModelState.IsValid)
             {
-                throw new ApplicationException();
+                //throw new ApplicationException();
             }
             using (var unitOfInstrument = new UnitOfInstrument())
             {

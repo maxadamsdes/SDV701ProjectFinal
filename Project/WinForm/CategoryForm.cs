@@ -8,62 +8,57 @@ namespace InstrumentShop.WinForm
 {
     public partial class CategoryForm : Form
     {
+        private static CategoryModel _category;
+        private int? instrumentID;
+
+        public static CategoryModel Category { get => _category; set => _category = value; }
+
         public CategoryForm()
         {
             InitializeComponent();
         }
 
-        private CategoryModel _category;
-        private InstrumentList _instrumentList;
-        private static Dictionary<int?, CategoryForm> _categoryFormList = new Dictionary<int?, CategoryForm>();
-
-        private void UpdateTitle(string galleryName)
-        {
-            if (!string.IsNullOrEmpty(galleryName))
-                Text = "Category Detials - " + galleryName;
-        }
 
         private void UpdateDisplay()
         {
-            if (_instrumentList.SortOrder == 0)
+            instrumentList.DataSource = Category.Instruments;
+            if (Category.ID == 1)
             {
-                _instrumentList.SortByName();
-                byName.Checked = true;
+                instrumentList.Columns["NumberOfStrings"].Visible = false;
+                instrumentList.Columns["Mouthpiece"].Visible = false;
             }
-            else
+            else if (Category.ID == 2)
             {
-                _instrumentList.SortByDate();
-                byDate.Checked = true;
+                instrumentList.Columns["Tuning"].Visible = false;
+                instrumentList.Columns["Mouthpiece"].Visible = false;
             }
-
-            instrumentList.DataSource = _category.Instruments;
-            instrumentList.DataSource = _instrumentList;
-            totalLabel.Text = Convert.ToString(_instrumentList.GetTotalValue());
+            else if (Category.ID == 3)
+            {
+                instrumentList.Columns["NumberOfStrings"].Visible = false;
+                instrumentList.Columns["Tuning"].Visible = false;
+            }
+            //instrumentList.DataSource = _instrumentList;
+            //if (_instrumentList != null)
+            //{
+            //    totalLabel.Text = Convert.ToString(_instrumentList.GetTotalValue());
+            //}
             MainForm.Instance.UpdateDisplay();
         }
 
         public void SetDetails(CategoryModel category)
         {
-            _category = category;
-            name.Enabled = string.IsNullOrEmpty(_category.Description);
+            Category = category;
+            name.Enabled = string.IsNullOrEmpty(Category.Description);
             UpdateForm();
             UpdateDisplay();
-            //MainForm.Instance.ShopNameChanged += new MainForm.Notify(UpdateTitle);
-            //UpdateTitle(_category.CategoryList.GalleryName);
             Show();
-            
         }
 
         private void UpdateForm()
         {
-            name.Text = _category.Description;
-            //_instrumentList = _category.InstrumentList;
+            name.Text = Category.Description;
         }
 
-        private void PushData()
-        {
-            _category.Description = name.Text;
-        }
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
@@ -71,104 +66,40 @@ namespace InstrumentShop.WinForm
 
             if (index >= 0 && MessageBox.Show("Are you sure?", "Deleting instrument", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                _instrumentList.RemoveAt(index);
+                //_instrumentList.RemoveAt(index);
                 UpdateDisplay();
             }
         }
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            string reply = new InputBox(Instrument.FACTORY_PROMPT).Answer;
-            if (!string.IsNullOrEmpty(reply))
-            {
-                _instrumentList.AddInstrument(reply[0]);
-                UpdateDisplay();
-            }
-        }
-
-        private async void closeButton_Click(object sender, EventArgs e)
-        {
-            if (IsValid())
-            {
-                PushData();
-                try
-                {
-
-                    if (name.Enabled)
-                    {
-                        await RestClient.AddCategoryAsync(_category);
-                        MessageBox.Show("Category Added!", "Success");
-                        MainForm.Instance.UpdateDisplay();
-                        name.Enabled = false;
-                    }
-                    else
-                    {
-                        await RestClient.UpdateCategoryAsync(_category);
-                    }
-                }
-
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                Hide();
-            }
-        }
-
-        private Boolean IsValid()
-        {
-            if (name.Enabled && name.Text != "")
-            {
-                return true;
-            }
-            else if (name.Text == "")
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
-        private void instrumentList_DoubleClick(object sender, EventArgs e)
-        {
             try
             {
-                _instrumentList.EditInstrument((int)instrumentList.CurrentRow.Cells[0].Value);
-                UpdateDisplay();
+                InstrumentForm.Run(null);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error finding category");
             }
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         private void byDate_CheckedChanged(object sender, EventArgs e)
         {
-            _instrumentList.SortOrder = Convert.ToByte(byDate.Checked);
+            //instrumentList.SortOrder = Convert.ToByte(byDate.Checked);
             UpdateDisplay();
         }
 
         public static void Run(int? categoryID)
         {
             CategoryForm categoryForm;
-            if(!categoryID.HasValue) //adds category
-            {
-                categoryForm = new CategoryForm();
-                categoryForm.SetDetails(new CategoryModel());
-            }
-            if (!_categoryFormList.ContainsKey(categoryID.Value)) //category is cached
-            {
-                categoryForm = _categoryFormList[categoryID.Value];
-                
-            }
-            else
-            {
-                categoryForm = new CategoryForm();
-                _categoryFormList.Add(categoryID.Value, categoryForm);
-                categoryForm.GetCategory(categoryID.Value);
-            }
+            categoryForm = new CategoryForm();
+            categoryForm.GetCategory(categoryID.Value);
+            Console.WriteLine(categoryID.Value);
             categoryForm.Show();
             categoryForm.Activate();
         }
@@ -176,6 +107,27 @@ namespace InstrumentShop.WinForm
         private async void GetCategory(int categoryID)
         {
             SetDetails(await RestClient.GetCategoryAsync(categoryID));
+        }
+
+        private void continueButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                InstrumentForm.Run(instrumentID);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error finding category");
+            }
+        }
+
+        private void instrumentList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                instrumentID = Convert.ToInt32(instrumentList.Rows[e.RowIndex].Cells["Id"].Value);
+                Console.WriteLine(instrumentID);
+            }
         }
     }
 }

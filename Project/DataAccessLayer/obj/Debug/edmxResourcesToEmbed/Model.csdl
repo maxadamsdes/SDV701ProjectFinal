@@ -5,7 +5,7 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" />
-    <Property Name="Description" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Instruments" Relationship="Self.FK_Instrument_Category" FromRole="Category" ToRole="Instrument" />
   </EntityType>
   <EntityType Name="Instrument">
@@ -14,13 +14,26 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CategoryID" Type="Int32" Nullable="false" />
-    <Property Name="Description" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="PricePerItem" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="LastModified" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="QuantityLeft" Type="Int32" />
-    <Property Name="Condition" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="BusinessSpecificDetail" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="Condition" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Tuning" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="NumberOfStrings" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Mouthpiece" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Category" Relationship="Self.FK_Instrument_Category" FromRole="Instrument" ToRole="Category" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_Order_Instrument" FromRole="Instrument" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="PriceTotal" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <NavigationProperty Name="Instrument" Relationship="Self.FK_Order_Instrument" FromRole="Order" ToRole="Instrument" />
   </EntityType>
   <Association Name="FK_Instrument_Category">
     <End Role="Category" Type="Self.Category" Multiplicity="1" />
@@ -34,12 +47,29 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="ModelContext" annotation:LazyLoadingEnabled="true">
+  <Association Name="FK_Order_Instrument">
+    <End Role="Instrument" Type="Self.Instrument" Multiplicity="1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instrument">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Categories" EntityType="Self.Category" />
     <EntitySet Name="Instruments" EntityType="Self.Instrument" />
+    <EntitySet Name="Order" EntityType="Self.Order" />
     <AssociationSet Name="FK_Instrument_Category" Association="Self.FK_Instrument_Category">
       <End Role="Category" EntitySet="Categories" />
       <End Role="Instrument" EntitySet="Instruments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Instrument" Association="Self.FK_Order_Instrument">
+      <End Role="Instrument" EntitySet="Instruments" />
+      <End Role="Order" EntitySet="Order" />
     </AssociationSet>
   </EntityContainer>
 </Schema>
