@@ -10,6 +10,6 @@ namespace InstrumentShop.Models
         [Required]
         public int Quantity { get; set; }
         [Required]
-        public decimal PriceTotal { get; set; }
+        public decimal? PriceTotal { get; set; }
     }
 }

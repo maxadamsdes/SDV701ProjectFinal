@@ -72,3 +72,8 @@ D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\DataAccessLayer\obj
 D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\DataAccessLayer\obj\Debug\InstrumentShop.DataAccessLayer.dll
 D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\DataAccessLayer\obj\Debug\InstrumentShop.DataAccessLayer.pdb
+D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\DataAccessLayer\bin\Debug\InstrumentShop.Models.dll
+D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\DataAccessLayer\bin\Debug\System.Linq.Dynamic.Core.dll
+D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\DataAccessLayer\bin\Debug\InstrumentShop.Models.pdb
+D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\DataAccessLayer\bin\Debug\System.Linq.Dynamic.Core.pdb
+D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\DataAccessLayer\bin\Debug\System.Linq.Dynamic.Core.xml

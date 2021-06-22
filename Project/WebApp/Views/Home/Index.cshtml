@@ -1,0 +1,48 @@
+﻿@model WebApp.Models.CategoryListViewModel
+@{ 
+    ViewBag.Title = "Home Page";
+}
+<h1>@Model.Title</h1>
+<h2>Instrument Categories</h2>
+@using (Html.BeginForm("Index", "Home", FormMethod.Get, new { @class = "form-inline" }))
+{
+    <p>
+        <input type="text" class="form-control" name="search" placeholder="Category" value="@Model.Search">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </p>
+}
+<div class="row">
+    <div class="col-md-6"><p><strong>Category</strong></p></div>
+    <div class="col-md-6"><p><strong>Instruments</strong></p></div>
+</div>
+@foreach(var category in Model.Categories)
+{
+    <div class="row">
+        <div class="col-md-6">
+            <p>@Html.ActionLink(category.Description, "Category", "Home", new { id = category.ID }, null)</p>
+        </div>
+        <div class="col-md-6">
+            <p>
+                @category.Instruments.Count
+                @if (category.Instruments.Count == 1)
+                {
+                    <text>Instrument</text>
+                }
+                else
+                {
+                    <text> Instruments </text>
+                }
+            </p>
+        </div>
+    </div>
+}
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <span class="glyphicon glyphicon-sort"></span>&nbsp;Sort
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+        <li>@Html.ActionLink("Alphabetically A-Z", "Index", "Home", new { search = Model.Search, sort = "asc" }, null)</li>
+        <li>@Html.ActionLink("Alphabetically Z-A", "Index", "Home", new { search = Model.Search, sort = "desc" }, null)</li>
+    </ul>
+</div>

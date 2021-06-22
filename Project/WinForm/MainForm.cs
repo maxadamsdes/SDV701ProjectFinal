@@ -1,5 +1,7 @@
+using InstrumentShop.Models;
 using InstrumentShop.RestApiClient;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 namespace InstrumentShop.WinForm
 {
@@ -10,6 +12,10 @@ namespace InstrumentShop.WinForm
         static MainForm()
         {
 
+        }
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            UpdateDisplay();
         }
 
         private MainForm()
@@ -28,11 +34,23 @@ namespace InstrumentShop.WinForm
             {
                 categoryList.DataSource = null;
                 categoryList.DataSource = await RestClient.ListCategoryNamesAsync();
+                GetTotal();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.GetBaseException().Message);
             }
+        }
+
+        private async void GetTotal()
+        {
+            var _instruments = await RestClient.ListInstrumentNamesAsync();
+            decimal value = 0;
+            foreach (var instrument in _instruments)
+            {
+                value += instrument.PricePerItem * instrument.QuantityLeft;
+            }
+            valueLabel.Text = value.ToString();
         }
 
         private void continueButton_Click(object sender, EventArgs e)
@@ -53,10 +71,7 @@ namespace InstrumentShop.WinForm
         }
 
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            UpdateDisplay();
-        }
+        
 
         private void categoryList_SelectedIndexChanged(object sender, EventArgs e)
         {

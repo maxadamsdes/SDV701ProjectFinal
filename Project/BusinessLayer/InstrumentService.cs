@@ -1,6 +1,7 @@
 ﻿using InstrumentShop.DataAccessLayer;
 using AutoMapper;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace InstrumentShop.BusinessLayer
 {
@@ -12,9 +13,9 @@ namespace InstrumentShop.BusinessLayer
             _unitOfInstrument = unitOfInstrument;
         }
 
-        public int Add(Models.InstrumentModel instrument)
+        public int Add(Models.InstrumentListitemModel instrument)
         {
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<Models.InstrumentModel, Instrument>()
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<Models.InstrumentListitemModel, Instrument>()
             .ForMember(x => x.Category, opt => opt.Ignore()));
             IMapper mapper = new Mapper(config);
             var data = new Instrument();
@@ -24,9 +25,9 @@ namespace InstrumentShop.BusinessLayer
             return data.ID;
         }
 
-        public int Update(Models.InstrumentModel instrument)
+        public int Update(Models.InstrumentListitemModel instrument)
         {
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<Models.InstrumentModel, Instrument>()
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<Models.InstrumentListitemModel, Instrument>()
             .ForMember(x => x.Category, opt => opt.Ignore()));
             IMapper mapper = new Mapper(config);
             var data = _unitOfInstrument.InstrumentRepository.Get(instrument.ID);
@@ -41,18 +42,22 @@ namespace InstrumentShop.BusinessLayer
             _unitOfInstrument.InstrumentRepository.Delete(id);
             _unitOfInstrument.Save();
         }
-        public IList<Models.InstrumentModel> List()
+        public IList<Models.InstrumentListitemModel> List()
         {
             var instrument = _unitOfInstrument.InstrumentRepository.List();
             var config = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<Instrument, Models.InstrumentModel>();
-                cfg.CreateMap<Instrument, Models.InstrumentModel>();
+                cfg.CreateMap<Instrument, Models.InstrumentListitemModel>();
+                cfg.CreateMap<Instrument, Models.InstrumentListitemModel>();
             });
             IMapper mapper = new Mapper(config);
-            var models = new List<Models.InstrumentModel>();
+            var models = new List<Models.InstrumentListitemModel>();
             mapper.Map(instrument, models);
             return models;
+        }
+        public IEnumerable ListNames()
+        {
+            return _unitOfInstrument.InstrumentRepository.ListNames();
         }
 
 

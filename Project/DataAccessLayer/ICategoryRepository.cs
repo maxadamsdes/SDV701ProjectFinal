@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using InstrumentShop.Models;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace InstrumentShop.DataAccessLayer
@@ -11,6 +12,7 @@ namespace InstrumentShop.DataAccessLayer
         Category Get(int id);
         IEnumerable<Category> List();
         IEnumerable ListNames();
+        IEnumerable<Category> List(string search, Sort sortBy);
         void Update(Category instance);
     }
 }

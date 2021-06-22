@@ -23,6 +23,7 @@ namespace InstrumentShop.DataAccessLayer
         ModelContext _context = new ModelContext();
         ICategoryRepository _categoryRepository;
         IInstrumentRepository _instrumentRepository;
+        IOrderRepository _orderRepository;
         public ICategoryRepository CategoryRepository
         {
             get
@@ -45,10 +46,34 @@ namespace InstrumentShop.DataAccessLayer
                 return _instrumentRepository;
             }
         }
+        public IOrderRepository OrderRepository
+        {
+            get
+            {
+                if (_orderRepository == null)
+                {
+                    _orderRepository = new OrderRepository(_context);
+                }
+                return _orderRepository;
+            }
+        }
 
         public void Save()
         {
-            _context.SaveChanges();
+            try
+            {
+                _context.SaveChanges();
+            }
+            catch (System.Data.Entity.Validation.DbEntityValidationException ex)
+            {
+                foreach (var entityValidationErrors in ex.EntityValidationErrors)
+                {
+                    foreach (var validationError in entityValidationErrors.ValidationErrors)
+                    {
+                        Console.WriteLine("Property: " + validationError.PropertyName + " Error: " + validationError.ErrorMessage);
+                    }
+                }
+            }
         }
     }
 }

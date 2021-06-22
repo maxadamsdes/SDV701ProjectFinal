@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace InstrumentShop.Models
 {
-    public class InstrumentModel
+    public class InstrumentListitemModel
     {
         public int ID { get; set; }
         public int CategoryID { get; set; }

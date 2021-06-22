@@ -49,6 +49,7 @@ namespace InstrumentShop.WinForm
         {
             Category = category;
             name.Enabled = string.IsNullOrEmpty(Category.Description);
+            totalLabel.Text = GetTotal(category).ToString();
             UpdateForm();
             UpdateDisplay();
             Show();
@@ -59,6 +60,15 @@ namespace InstrumentShop.WinForm
             name.Text = Category.Description;
         }
 
+        private decimal GetTotal(CategoryModel category)
+        {
+            decimal value = 0;
+            foreach(InstrumentListitemModel instrument in category.Instruments)
+            {
+                value += instrument.PricePerItem * instrument.QuantityLeft;
+            }
+            return value;
+        }
 
         private void deleteButton_Click(object sender, EventArgs e)
         {

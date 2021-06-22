@@ -7,7 +7,7 @@ using NUnit.Framework;
 
 namespace InstrumentShop.BusinessLayer
 {
-    public class CategoryService
+    public class CategoryService : ICategoryService
     {
         private readonly IUnitOfInstrument _unitOfInstrument;
         public CategoryService(IUnitOfInstrument unitOfInstrument)
@@ -44,20 +44,45 @@ namespace InstrumentShop.BusinessLayer
             _unitOfInstrument.CategoryRepository.Delete(id);
             _unitOfInstrument.Save();
         }
+
+        public CategoryModel Get(int categoryID)
+        {
+            var category = _unitOfInstrument.CategoryRepository.Get(categoryID);
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Category, CategoryModel>();
+                cfg.CreateMap<Instrument, InstrumentListitemModel>();
+            });
+            IMapper mapper = new Mapper(config);
+            var data = new CategoryModel();
+            mapper.Map(category, data);
+            return data;
+        }
+
         public IList<CategoryModel> List()
         {
             var categorys = _unitOfInstrument.CategoryRepository.List();
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Category, CategoryModel>();
-                cfg.CreateMap<Instrument, InstrumentModel>();
+                cfg.CreateMap<Instrument, InstrumentListitemModel>();
 
             });
-            var mapper = config.CreateMapper();
+            IMapper mapper = new Mapper(config);
+            var models = new List<CategoryModel>();
+            mapper.Map(categorys, models);
+            return models;
+        }
+        public IList<CategoryModel> List(string search, Sort sortBy)
+        {
+            var categorys = _unitOfInstrument.CategoryRepository.List(search, sortBy);
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Category, CategoryModel>();
+                cfg.CreateMap<Instrument, InstrumentListitemModel>();
 
-
-            //IMapper mapper = new Mapper(config);
-
+            });
+            IMapper mapper = new Mapper(config);
             var models = new List<CategoryModel>();
             mapper.Map(categorys, models);
             return models;

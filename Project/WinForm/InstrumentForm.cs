@@ -7,10 +7,9 @@ namespace InstrumentShop.WinForm
 {
     public partial class InstrumentForm : Form
     {
-        protected InstrumentModel _instrument;
+        protected InstrumentListitemModel _instrument;
         protected InstrumentForm _instrumentForm;
         private bool NewInstrument;
-        //protected Instrument _instrument;
 
         public InstrumentForm()
         {
@@ -36,7 +35,7 @@ namespace InstrumentShop.WinForm
                     case 3: instrumentForm = new WoodwindForm(); break;
                 }
                 instrumentForm.NewInstrument = true;
-                instrumentForm._instrument = new InstrumentModel();
+                instrumentForm._instrument = new InstrumentListitemModel();
                 instrumentForm._instrument.CategoryID = CategoryForm.Category.ID;
                 instrumentForm._instrument.ID = 500;
                 instrumentForm.Show();
@@ -103,7 +102,7 @@ namespace InstrumentShop.WinForm
                     if (NewInstrument)
                     {
                         await RestClient.AddInstrumentAsync(_instrument);
-                        MessageBox.Show("Artist Added!", "Success");
+                        MessageBox.Show("Instrument Added!", "Success");
                         MainForm.Instance.UpdateDisplay();
                         NewInstrument = false;
                     }

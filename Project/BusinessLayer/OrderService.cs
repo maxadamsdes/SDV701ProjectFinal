@@ -6,12 +6,12 @@ using NUnit.Framework;
 
 namespace InstrumentShop.BusinessLayer
 {
-    public class OrderService
+    public class OrderService : IOrderService
     {
-        private readonly IUnitOfOrder _unitOfOrder;
-        public OrderService(IUnitOfOrder unitOfOrder)
+        private readonly IUnitOfInstrument _unitOfInstrument;
+        public OrderService(IUnitOfInstrument unitOfInstrument)
         {
-            _unitOfOrder = unitOfOrder;
+            _unitOfInstrument = unitOfInstrument;
         }
         public int Add(Models.OrderModel order)
         {
@@ -19,8 +19,8 @@ namespace InstrumentShop.BusinessLayer
             IMapper mapper = new Mapper(config);
             var data = new Order();
             mapper.Map(order, data);
-            _unitOfOrder.OrderRepository.Add(data);
-            _unitOfOrder.Save();
+            _unitOfInstrument.OrderRepository.Add(data);
+            _unitOfInstrument.Save();
             return data.ID;
         }
 
@@ -29,21 +29,21 @@ namespace InstrumentShop.BusinessLayer
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Models.OrderModel, Order>()
             .ForMember(x => x, opt => opt.Ignore()));
             IMapper mapper = new Mapper(config);
-            var data = _unitOfOrder.OrderRepository.Get(order.ID);
+            var data = _unitOfInstrument.OrderRepository.Get(order.ID);
             mapper.Map(order, data);
-            _unitOfOrder.OrderRepository.Update(data);
-            _unitOfOrder.Save();
+            _unitOfInstrument.OrderRepository.Update(data);
+            _unitOfInstrument.Save();
             return data.ID;
         }
 
         public void Delete(int id)
         {
-            _unitOfOrder.OrderRepository.Delete(id);
-            _unitOfOrder.Save();
+            _unitOfInstrument.OrderRepository.Delete(id);
+            _unitOfInstrument.Save();
         }
         public IList<Models.OrderModel> List()
         {
-            var categorys = _unitOfOrder.OrderRepository.List();
+            var categorys = _unitOfInstrument.OrderRepository.List();
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Order, Models.OrderModel>();
@@ -55,7 +55,7 @@ namespace InstrumentShop.BusinessLayer
         }
         public IEnumerable ListNames()
         {
-            return _unitOfOrder.OrderRepository.ListNames();
+            return _unitOfInstrument.OrderRepository.ListNames();
         }
 
 

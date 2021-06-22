@@ -2,6 +2,8 @@
 using System.Linq;
 using System.Collections;
 using System.Data.Entity;
+using System.Linq.Dynamic.Core;
+using InstrumentShop.Models;
 
 namespace InstrumentShop.DataAccessLayer
 {
@@ -50,6 +52,32 @@ namespace InstrumentShop.DataAccessLayer
         public virtual IEnumerable<Category> List()
         {
             return All.ToList();
+        }
+
+        public virtual IEnumerable<Category> List(string search, Sort sort)
+        {
+            //Check if the field is a category property
+            if (typeof(Category).GetProperty(sort.Field) == null)
+            {
+                sort.Field = "Description";
+            }
+
+            var query = All;
+
+            if (!string.IsNullOrEmpty(search))
+            {
+                query = query.Where(c => c.Description != null && c.Description.ToLower().Contains(search.ToLower()));
+            }
+
+            if (sort.Direction == SortOrder.Ascending)
+            {
+                query = query.OrderBy(sort.Field);
+            }
+            else
+            {
+                query = query.OrderBy($"{sort.Field} desc");
+            }
+            return query.ToList();
         }
 
         public virtual IEnumerable ListNames()

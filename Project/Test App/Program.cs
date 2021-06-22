@@ -52,5 +52,26 @@ namespace InstrumentShop.DataAccessLayer.Test_App
                 }
             }
         }
+
+        public static async void GetOrders()
+        {
+            var orders = await RestClient.ListOrdersAsync();
+            foreach (var order in orders)
+            {
+                Console.WriteLine(order.ID);
+            }
+            if (orders.Count > 0)
+            {
+                var order = await RestClient.GetOrderAsync(orders[0].ID);
+                try
+                {
+                    await RestClient.UpdateOrderAsync(order);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
     }
 }

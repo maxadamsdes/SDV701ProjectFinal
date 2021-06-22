@@ -14,6 +14,5 @@ namespace InstrumentShop.Models
         public string Tuning { get; set; }
         public string Mouthpiece { get; set; }
         public string NumberOfStrings { get; set; }
-        public char InstrumentType { get; set; }
     }
 }

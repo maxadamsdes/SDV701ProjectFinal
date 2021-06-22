@@ -9,6 +9,6 @@ namespace InstrumentShop.Models
         [Required(AllowEmptyStrings = false)]
         [StringLength(25)]
         public string Description { get; set; }
-        public IList<InstrumentModel> Instruments { get; set; }
+        public IList<InstrumentListitemModel> Instruments { get; set; }
     }
 }

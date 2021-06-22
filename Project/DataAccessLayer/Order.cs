@@ -17,7 +17,7 @@ namespace InstrumentShop.DataAccessLayer
         public int ID { get; set; }
         public int ItemID { get; set; }
         public int Quantity { get; set; }
-        public decimal PriceTotal { get; set; }
+        public Nullable<decimal> PriceTotal { get; set; }
     
         public virtual Instrument Instrument { get; set; }
     }

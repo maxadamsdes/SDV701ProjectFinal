@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Data.Entity;
+using System.Collections;
 
 namespace InstrumentShop.DataAccessLayer
 {
@@ -48,6 +49,12 @@ namespace InstrumentShop.DataAccessLayer
         public virtual IEnumerable<Instrument> List()
         {
             return All.ToList();
+        }
+        public virtual IEnumerable ListNames()
+        {
+            var query = from instrument in All
+                        select new { instrument.ID, instrument.CategoryID, instrument.Description, instrument.Condition, instrument.PricePerItem };
+            return query.ToList();
         }
     }
 }

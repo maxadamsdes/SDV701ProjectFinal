@@ -151,3 +151,6 @@ D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\RestApi\obj\Debug\R
 D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\RestApi\bin\Debug\EntityFramework.SqlServer.dll
 D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\RestApi\bin\Debug\EntityFramework.SqlServer.xml
 D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\RestApi\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\RestApi\bin\Debug\System.Linq.Dynamic.Core.dll
+D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\RestApi\bin\Debug\System.Linq.Dynamic.Core.pdb
+D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\RestApi\bin\Debug\System.Linq.Dynamic.Core.xml

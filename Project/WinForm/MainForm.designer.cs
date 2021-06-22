@@ -28,7 +28,7 @@ namespace InstrumentShop.WinForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.vlaueLabel = new System.Windows.Forms.Label();
+            this.valueLabel = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.quitButton = new System.Windows.Forms.Button();
             this.continueButton = new System.Windows.Forms.Button();
@@ -41,13 +41,13 @@ namespace InstrumentShop.WinForm
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // vlaueLabel
+            // valueLabel
             // 
-            this.vlaueLabel.Location = new System.Drawing.Point(201, 353);
-            this.vlaueLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.vlaueLabel.Name = "vlaueLabel";
-            this.vlaueLabel.Size = new System.Drawing.Size(102, 25);
-            this.vlaueLabel.TabIndex = 13;
+            this.valueLabel.Location = new System.Drawing.Point(201, 353);
+            this.valueLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.valueLabel.Name = "valueLabel";
+            this.valueLabel.Size = new System.Drawing.Size(102, 25);
+            this.valueLabel.TabIndex = 13;
             // 
             // Label2
             // 
@@ -143,7 +143,7 @@ namespace InstrumentShop.WinForm
             this.ClientSize = new System.Drawing.Size(606, 388);
             this.Controls.Add(this.ordersButton);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.vlaueLabel);
+            this.Controls.Add(this.valueLabel);
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.continueButton);
@@ -160,7 +160,7 @@ namespace InstrumentShop.WinForm
 
         #endregion
 
-        internal System.Windows.Forms.Label vlaueLabel;
+        internal System.Windows.Forms.Label valueLabel;
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.Button quitButton;
         internal System.Windows.Forms.Button continueButton;

@@ -26,7 +26,7 @@ namespace InstrumentShop.RestApiClient
             using (HttpClient httpClient = new HttpClient())
             {
                 string result = await
-                httpClient.GetStringAsync($"{Url}/api/instrument/listinstruments");
+                httpClient.GetStringAsync($"{Url}/api/instrument/listnames");
                 return
                 JsonConvert.DeserializeObject<List<InstrumentListItemModel>>(result);
             }
@@ -49,12 +49,12 @@ namespace InstrumentShop.RestApiClient
                 return JsonConvert.DeserializeObject<List<CategoryModel>>(result);
             }
         }
-        public async static Task<IList<InstrumentModel>> ListInstrumentsAsync()
+        public async static Task<IList<InstrumentListitemModel>> ListInstrumentsAsync()
         {
             using (HttpClient httpClient = new HttpClient())
             {
                 string result = await httpClient.GetStringAsync($"{Url}/api/instrument/list");
-                return JsonConvert.DeserializeObject<List<InstrumentModel>>(result);
+                return JsonConvert.DeserializeObject<List<InstrumentListitemModel>>(result);
             }
         }
         public async static Task<IList<OrderModel>> ListOrdersAsync()
@@ -73,11 +73,11 @@ namespace InstrumentShop.RestApiClient
                 return JsonConvert.DeserializeObject<CategoryModel>(await httpClient.GetStringAsync($"{Url}/api/category/get?id=" + id));
             }
         }
-        public async static Task<InstrumentModel> GetInstrumentAsync(int? id)
+        public async static Task<InstrumentListitemModel> GetInstrumentAsync(int? id)
         {
             using (HttpClient httpClient = new HttpClient())
             {
-                return JsonConvert.DeserializeObject<InstrumentModel>(await httpClient.GetStringAsync($"{Url}/api/instrument/get?id=" + id));
+                return JsonConvert.DeserializeObject<InstrumentListitemModel>(await httpClient.GetStringAsync($"{Url}/api/instrument/get?id=" + id));
             }
         }
         public async static Task<OrderModel> GetOrderAsync(int? id)
@@ -87,7 +87,7 @@ namespace InstrumentShop.RestApiClient
                 return JsonConvert.DeserializeObject<OrderModel>(await httpClient.GetStringAsync($"{Url}/api/order/get?id=" + id));
             }
         }
-        private async static Task<int> AddOrUpdateAsync<T>(T model, string url, string request)
+        private async static Task<string> InsertOrUpdateAsync<T>(T model, string url, string request)
         {
             using (HttpRequestMessage requestMessage = new HttpRequestMessage(new HttpMethod(request), url))
             using (requestMessage.Content = new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, "application/json"))
@@ -95,31 +95,33 @@ namespace InstrumentShop.RestApiClient
             {
                 HttpResponseMessage responseMessage = await httpClient.SendAsync(requestMessage);
                 responseMessage.EnsureSuccessStatusCode();
-                return Convert.ToInt32(await responseMessage.Content.ReadAsStringAsync());
+                return await responseMessage.Content.ReadAsStringAsync();
+                //responseMessage.EnsureSuccessStatusCode();
+                //return Convert.ToInt32(await responseMessage.Content.ReadAsStringAsync());
             }
         }
 
-        public async static Task<int> AddInstrumentAsync(InstrumentModel instrument)
+        public async static Task<string> AddInstrumentAsync(InstrumentListitemModel instrument)
         {
-            return await AddOrUpdateAsync(instrument, $"{Url}/api/instrument/add", "POST");
+            return await InsertOrUpdateAsync(instrument, $"{Url}/api/instrument/add", "POST");
         }
 
-        public async static Task<int> AddOrderAsync(OrderModel order)
+        public async static Task<string> AddOrderAsync(OrderModel order)
         {
-            return await AddOrUpdateAsync(order, $"{Url}/api/order/add", "POST");
+            return await InsertOrUpdateAsync(order, $"{Url}/api/order/add", "POST");
         }
 
-        public async static Task<int> UpdateCategoryAsync(CategoryModel category)
+        public async static Task<string> UpdateCategoryAsync(CategoryModel category)
         {
-            return await AddOrUpdateAsync(category, $"{Url}/api/category/update", "PUT");
+            return await InsertOrUpdateAsync(category, $"{Url}/api/category/update", "PUT");
         }
-        public async static Task<int> UpdateInstrumentAsync(InstrumentModel instrument)
+        public async static Task<string> UpdateInstrumentAsync(InstrumentListitemModel instrument)
         {
-            return await AddOrUpdateAsync(instrument, $"{Url}/api/instrument/update", "PUT");
+            return await InsertOrUpdateAsync(instrument, $"{Url}/api/instrument/update", "PUT");
         }
-        public async static Task<int> UpdateOrderAsync(OrderModel order)
+        public async static Task<string> UpdateOrderAsync(OrderModel order)
         {
-            return await AddOrUpdateAsync(order, $"{Url}/api/order/update", "PUT");
+            return await InsertOrUpdateAsync(order, $"{Url}/api/order/update", "PUT");
         }
         public async static Task DeleteCategoryAsync(int id)
         {

@@ -69,6 +69,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICategoryService.cs" />
+    <Compile Include="IOrderService.cs" />
     <Compile Include="OrderService.cs" />
     <Compile Include="InstrumentService.cs" />
     <Compile Include="CategoryService.cs" />

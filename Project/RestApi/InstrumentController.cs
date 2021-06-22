@@ -11,9 +11,17 @@ namespace InstrumentShop.RestApi
 {
     public class InstrumentController : System.Web.Http.ApiController
     {
-
         [HttpGet]
-        public InstrumentModel Get(int id)
+        public IEnumerable ListNames()
+        {
+            using (var unitOfInstrument = new UnitOfInstrument())
+            {
+                var service = new InstrumentService(unitOfInstrument);
+                return service.ListNames();
+            }
+        }
+        [HttpGet]
+        public InstrumentListitemModel Get(int id)
         {
             using (var unitOfInstrument = new UnitOfInstrument())
             {
@@ -27,7 +35,7 @@ namespace InstrumentShop.RestApi
 
         [HttpPost]
 
-        public int Add(InstrumentModel instrument)
+        public int Add(InstrumentListitemModel instrument)
         {
             Console.WriteLine("How have we got here then...");
             Validate(instrument);
@@ -44,7 +52,7 @@ namespace InstrumentShop.RestApi
         }
 
         [HttpPut]
-        public int Update(InstrumentModel instrument)
+        public int Update(InstrumentListitemModel instrument)
         {
             Validate(instrument);
             if (!ModelState.IsValid)

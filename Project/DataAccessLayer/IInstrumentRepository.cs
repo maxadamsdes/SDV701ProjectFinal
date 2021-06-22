@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 
 namespace InstrumentShop.DataAccessLayer
 {
@@ -9,6 +10,7 @@ namespace InstrumentShop.DataAccessLayer
         void Delete(Instrument instance);
         Instrument Get(int id);
         IEnumerable<Instrument> List();
+        IEnumerable ListNames();
         void Update(Instrument instance);
     }
 }

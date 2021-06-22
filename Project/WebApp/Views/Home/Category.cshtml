@@ -1,0 +1,54 @@
+﻿@model WebApp.Models.CategoryViewModel
+@{
+    ViewBag.Title = "Category | " + Model.Category.Description;
+}
+<h1>@Model.Title</h1>
+<h2>@Model.Category.Description</h2>
+<h3>Instruments</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Description</th>
+            <th scope="col">Price Per Item</th>
+            <th scope="col">Condition</th>
+            <th scope="col">Quanitity Left</th>
+            @switch (@Model.Category.ID)
+            {
+                case 1:
+                    <th scope="col">Tuning</th>
+                    break;
+                case 2:
+                    <th scope="col">Number Of Strings</th>
+                    break;
+                case 3:
+                    <th scope="col">Mouthpiece</th>
+                    break;
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var instrument in Model.Category.Instruments)
+        {
+        <tr>
+            <td>@instrument.Description</td>
+            <td>@instrument.PricePerItem.ToString("C")</td>
+            <td>@instrument.Condition</td>
+            <td>@instrument.QuantityLeft.ToString()</td>
+            @switch (instrument.CategoryID)
+            {
+                case 1:
+                    <td>@($"{instrument.Tuning}")</td>
+                    break;
+                case 2:
+                    <td>@($"{instrument.NumberOfStrings}")</td>
+                    break;
+                case 3:
+                    <td>@($"{instrument.Mouthpiece}")</td>
+                    break;
+            }
+            <td class="btn btn-default" type="button" id="orderButton" value=@instrument.ID onclick=OrderButton>Order</td>
+        </tr>
+        }
+    </tbody>
+</table>
+

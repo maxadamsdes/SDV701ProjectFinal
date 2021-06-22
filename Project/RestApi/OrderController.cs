@@ -14,9 +14,9 @@ namespace InstrumentShop.RestApi
         [HttpGet]
         public IEnumerable ListNames()
         {
-            using (var unitOfOrder = new UnitOfOrder())
+            using (var unitOfInstrument = new UnitOfInstrument())
             {
-                var service = new OrderService(unitOfOrder);
+                var service = new OrderService(unitOfInstrument);
                 return service.ListNames();
             }
         }
@@ -25,7 +25,7 @@ namespace InstrumentShop.RestApi
         [HttpGet]
         public IEnumerable<OrderModel> List()
         {
-            using (var unitOfOrder = new UnitOfOrder())
+            using (var unitOfOrder = new UnitOfInstrument())
             {
                 var service = new OrderService(unitOfOrder);
                 return service.List();
@@ -35,13 +35,13 @@ namespace InstrumentShop.RestApi
         [HttpGet]
         public OrderModel Get(int id)
         {
-            using (var unitOfOrder = new UnitOfOrder())
+            using (var unitOfOrder = new UnitOfInstrument())
             {
                 var service = new OrderService(unitOfOrder);
-                var category = from a in service.List()
+                var order = from a in service.List()
                              where a.ID.Equals(id)
                              select a;
-                return category.FirstOrDefault();
+                return order.FirstOrDefault();
             }
         }
 
@@ -54,7 +54,7 @@ namespace InstrumentShop.RestApi
             {
                 throw new ApplicationException();
             }
-            using (var unitOfOrder = new UnitOfOrder())
+            using (var unitOfOrder = new UnitOfInstrument())
             {
                 var service = new OrderService(unitOfOrder);
                 service.Add(order);
@@ -70,7 +70,7 @@ namespace InstrumentShop.RestApi
             {
                 //throw new ApplicationException();
             }
-            using (var unitOfOrder = new UnitOfOrder())
+            using (var unitOfOrder = new UnitOfInstrument())
             {
                 var service = new OrderService(unitOfOrder);
                 service.Update(category);
@@ -81,7 +81,7 @@ namespace InstrumentShop.RestApi
         [HttpDelete]
         public void Delete(int id)
         {
-            using (var unitOfOrder = new UnitOfOrder())
+            using (var unitOfOrder = new UnitOfInstrument())
             {
                 var service = new OrderService(unitOfOrder);
                 service.Delete(id);

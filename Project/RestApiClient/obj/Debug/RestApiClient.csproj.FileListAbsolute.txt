@@ -62,3 +62,6 @@ D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\RestApiClient\bin\D
 D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\RestApiClient\bin\Debug\EntityFramework.SqlServer.xml
 D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\RestApiClient\bin\Debug\fr\EntityFramework.resources.dll
 D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\RestApiClient\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\RestApiClient\bin\Debug\System.Linq.Dynamic.Core.dll
+D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\RestApiClient\bin\Debug\System.Linq.Dynamic.Core.pdb
+D:\Documents\GitHub\sdv701-s1-21-project-maxadamsdes\Project\RestApiClient\bin\Debug\System.Linq.Dynamic.Core.xml
