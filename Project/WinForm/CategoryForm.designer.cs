@@ -40,12 +40,6 @@ namespace InstrumentShop.WinForm
             this.Label1 = new System.Windows.Forms.Label();
             this.instrumentList = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.addButton = new System.Windows.Forms.Button();
             this.continueButton = new System.Windows.Forms.Button();
             this.optSort.SuspendLayout();
@@ -137,7 +131,7 @@ namespace InstrumentShop.WinForm
             this.name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.name.Multiline = true;
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(436, 70);
+            this.name.Size = new System.Drawing.Size(436, 32);
             this.name.TabIndex = 15;
             // 
             // Label1
@@ -157,84 +151,24 @@ namespace InstrumentShop.WinForm
             this.instrumentList.AllowUserToResizeRows = false;
             this.instrumentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.instrumentList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.instrumentList.Location = new System.Drawing.Point(0, 34);
+            this.instrumentList.Location = new System.Drawing.Point(0, 4);
             this.instrumentList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.instrumentList.MultiSelect = false;
             this.instrumentList.Name = "instrumentList";
             this.instrumentList.RowHeadersWidth = 51;
             this.instrumentList.RowTemplate.Height = 24;
-            this.instrumentList.Size = new System.Drawing.Size(682, 331);
+            this.instrumentList.Size = new System.Drawing.Size(682, 361);
             this.instrumentList.TabIndex = 28;
             this.instrumentList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.instrumentList_CellClick);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.instrumentList);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label9);
             this.panel1.Location = new System.Drawing.Point(20, 169);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(682, 366);
             this.panel1.TabIndex = 29;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(566, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 20);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Date Modified";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(370, 8);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 20);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Items Left";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(466, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 20);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Price (NZD)";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(268, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 20);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Condition";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 8);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 20);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Name";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(127, 8);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 20);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Description";
             // 
             // addButton
             // 
@@ -278,7 +212,6 @@ namespace InstrumentShop.WinForm
             this.optSort.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.instrumentList)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,12 +231,6 @@ namespace InstrumentShop.WinForm
         internal System.Windows.Forms.Label Label1;
         private System.Windows.Forms.DataGridView instrumentList;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         internal System.Windows.Forms.Button addButton;
         internal System.Windows.Forms.Button continueButton;
     }

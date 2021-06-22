@@ -3,9 +3,9 @@ using InstrumentShop.DataAccessLayer;
 using System.Collections;
 using System.Web.Http;
 using System.Linq;
-using System.Collections.Generic;
 using InstrumentShop.Models;
 using System;
+using System.Collections.Generic;
 
 namespace InstrumentShop.RestApi
 {
@@ -20,6 +20,17 @@ namespace InstrumentShop.RestApi
                 return service.ListNames();
             }
         }
+
+        [HttpGet]
+        public IEnumerable<InstrumentListitemModel> List()
+        {
+            using (var unitOfInstrument = new UnitOfInstrument())
+            {
+                var service = new InstrumentService(unitOfInstrument);
+                return service.List();
+            }
+        }
+
         [HttpGet]
         public InstrumentListitemModel Get(int id)
         {
@@ -57,7 +68,7 @@ namespace InstrumentShop.RestApi
             Validate(instrument);
             if (!ModelState.IsValid)
             {
-                //throw new ApplicationException();
+                throw new ApplicationException();
             }
             using (var unitOfInstrument = new UnitOfInstrument())
             {

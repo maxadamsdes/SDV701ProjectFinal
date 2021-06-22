@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Shop_DataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="ModelContext" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Category">
     <Key>
       <PropertyRef Name="ID" />
@@ -16,14 +16,14 @@
     <Property Name="CategoryID" Type="Int32" Nullable="false" />
     <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="PricePerItem" Type="Decimal" Precision="10" Scale="2" />
-    <Property Name="LastModified" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastModified" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="QuantityLeft" Type="Int32" />
     <Property Name="Condition" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Tuning" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="NumberOfStrings" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="Mouthpiece" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Category" Relationship="Self.FK_Instrument_Category" FromRole="Instrument" ToRole="Category" />
-    <NavigationProperty Name="Order" Relationship="Self.FK_Order_Instrument" FromRole="Instrument" ToRole="Order" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Order_Instrument" FromRole="Instrument" ToRole="Order" />
   </EntityType>
   <EntityType Name="Order">
     <Key>
@@ -31,8 +31,8 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ItemID" Type="Int32" Nullable="false" />
-    <Property Name="Quantity" Type="Int32" Nullable="false" />
-    <Property Name="PriceTotal" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="PriceTotal" Type="Decimal" Precision="18" Scale="0" />
     <NavigationProperty Name="Instrument" Relationship="Self.FK_Order_Instrument" FromRole="Order" ToRole="Instrument" />
   </EntityType>
   <Association Name="FK_Instrument_Category">
@@ -62,14 +62,14 @@
   <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Categories" EntityType="Self.Category" />
     <EntitySet Name="Instruments" EntityType="Self.Instrument" />
-    <EntitySet Name="Order" EntityType="Self.Order" />
+    <EntitySet Name="Orders" EntityType="Self.Order" />
     <AssociationSet Name="FK_Instrument_Category" Association="Self.FK_Instrument_Category">
       <End Role="Category" EntitySet="Categories" />
       <End Role="Instrument" EntitySet="Instruments" />
     </AssociationSet>
     <AssociationSet Name="FK_Order_Instrument" Association="Self.FK_Order_Instrument">
       <End Role="Instrument" EntitySet="Instruments" />
-      <End Role="Order" EntitySet="Order" />
+      <End Role="Order" EntitySet="Orders" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

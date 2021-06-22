@@ -17,14 +17,14 @@ namespace InstrumentShop.DataAccessLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Instrument()
         {
-            this.Order = new HashSet<Order>();
+            this.Orders = new HashSet<Order>();
         }
     
         public int ID { get; set; }
         public int CategoryID { get; set; }
         public string Description { get; set; }
         public Nullable<decimal> PricePerItem { get; set; }
-        public System.DateTime LastModified { get; set; }
+        public string LastModified { get; set; }
         public Nullable<int> QuantityLeft { get; set; }
         public string Condition { get; set; }
         public string Tuning { get; set; }
@@ -33,6 +33,6 @@ namespace InstrumentShop.DataAccessLayer
     
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Order { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

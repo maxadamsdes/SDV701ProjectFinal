@@ -1,7 +1,6 @@
 using InstrumentShop.Models;
 using InstrumentShop.RestApiClient;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace InstrumentShop.WinForm
@@ -10,6 +9,7 @@ namespace InstrumentShop.WinForm
     {
         private static CategoryModel _category;
         private int? instrumentID;
+        private string instrumentName;
 
         public static CategoryModel Category { get => _category; set => _category = value; }
 
@@ -19,8 +19,9 @@ namespace InstrumentShop.WinForm
         }
 
 
-        private void UpdateDisplay()
+        private async void UpdateDisplay()
         {
+            Category = await RestClient.GetCategoryAsync(Category.ID);
             instrumentList.DataSource = Category.Instruments;
             if (Category.ID == 1)
             {
@@ -37,11 +38,6 @@ namespace InstrumentShop.WinForm
                 instrumentList.Columns["NumberOfStrings"].Visible = false;
                 instrumentList.Columns["Tuning"].Visible = false;
             }
-            //instrumentList.DataSource = _instrumentList;
-            //if (_instrumentList != null)
-            //{
-            //    totalLabel.Text = Convert.ToString(_instrumentList.GetTotalValue());
-            //}
             MainForm.Instance.UpdateDisplay();
         }
 
@@ -70,15 +66,16 @@ namespace InstrumentShop.WinForm
             return value;
         }
 
-        private void deleteButton_Click(object sender, EventArgs e)
+        private async void deleteButton_Click(object sender, EventArgs e)
         {
-            int index = (int)instrumentList.CurrentRow.Cells[0].Value;
-
-            if (index >= 0 && MessageBox.Show("Are you sure?", "Deleting instrument", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            DialogResult result = MessageBox.Show($"Would you like to remove {instrumentName}", "Confirm", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
-                //_instrumentList.RemoveAt(index);
+                int ID = Convert.ToInt32(instrumentID);
+                await RestClient.DeleteInstrumentAsync(ID);
                 UpdateDisplay();
             }
+            
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -92,10 +89,23 @@ namespace InstrumentShop.WinForm
                 MessageBox.Show(ex.Message, "Error finding category");
             }
         }
+        private void continueButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                InstrumentForm.Run(instrumentID);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error finding category");
+            }
+        }
 
         private void closeButton_Click(object sender, EventArgs e)
         {
             Close();
+            MainForm.Instance.Update();
+            MainForm.Instance.Show();
         }
 
         private void byDate_CheckedChanged(object sender, EventArgs e)
@@ -119,23 +129,12 @@ namespace InstrumentShop.WinForm
             SetDetails(await RestClient.GetCategoryAsync(categoryID));
         }
 
-        private void continueButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                InstrumentForm.Run(instrumentID);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error finding category");
-            }
-        }
-
         private void instrumentList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 instrumentID = Convert.ToInt32(instrumentList.Rows[e.RowIndex].Cells["Id"].Value);
+                instrumentName = instrumentList.Rows[e.RowIndex].Cells["Description"].Value.ToString();
                 Console.WriteLine(instrumentID);
             }
         }

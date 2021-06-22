@@ -14,7 +14,7 @@ namespace InstrumentShop.Models
         [Range(0, 10000)]
         public decimal PricePerItem { get; set; }
         [Required]
-        public DateTime LastModified { get; set; }
+        public string LastModified { get; set; }
         [Range(0, 1000)]
         public int QuantityLeft { get; set; }
         [Required]

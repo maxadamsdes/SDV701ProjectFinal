@@ -1,5 +1,4 @@
-﻿using InstrumentShop.Models;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace InstrumentShop.WinForm
@@ -14,9 +13,6 @@ namespace InstrumentShop.WinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //InstrumentModel.LoadBrassForm = BrassForm.Run;
-            //InstrumentModel.Strings.LoadStringsForm = StringsForm.Run;
-            //InstrumentModel.Woodwind.LoadWoodwindForm = WoodwindForm.Run;
             Application.Run(MainForm.Instance);
         }
     }

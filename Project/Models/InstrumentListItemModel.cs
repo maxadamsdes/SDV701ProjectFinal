@@ -8,7 +8,7 @@ namespace InstrumentShop.Models
         public int CategoryID { get; set; }
         public string Description { get; set; }
         public decimal PricePerItem { get; set; }
-        public DateTime LastModified { get; set; }
+        public string LastModified { get; set; }
         public int QuantityLeft { get; set; }
         public string Condition { get; set; }
         public string Tuning { get; set; }

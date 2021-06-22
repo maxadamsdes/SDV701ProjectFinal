@@ -1,9 +1,9 @@
-﻿CREATE TABLE [dbo].[Orders]
+﻿CREATE TABLE [dbo].[Order]
 (
-	[ID]			INT		NOT NULL,
+	[ID]			INT		IDENTITY(1,1)		NOT NULL,
 	[ItemID]		INT		NOT NULL,
-	[Quantity]		INT		NOT NULL,
-	[PriceTotal]	Decimal	NOT NULL
+	[Quantity]		INT		NULL,
+	[PriceTotal]	Decimal	NULL
 	PRIMARY KEY CLUSTERED ([ID] ASC),
-	CONSTRAINT [FK_Item_ID] FOREIGN KEY (ItemID) REFERENCES [dbo].[Instrument] ([ID])
+	CONSTRAINT [FK_Order_Instrument] FOREIGN KEY (ItemID) REFERENCES [dbo].[Instrument] ([ID])
 )

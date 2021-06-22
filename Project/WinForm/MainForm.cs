@@ -1,7 +1,5 @@
-using InstrumentShop.Models;
 using InstrumentShop.RestApiClient;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 namespace InstrumentShop.WinForm
 {
@@ -44,7 +42,7 @@ namespace InstrumentShop.WinForm
 
         private async void GetTotal()
         {
-            var _instruments = await RestClient.ListInstrumentNamesAsync();
+            var _instruments = await RestClient.ListInstrumentsAsync();
             decimal value = 0;
             foreach (var instrument in _instruments)
             {

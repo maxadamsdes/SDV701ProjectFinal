@@ -53,7 +53,7 @@ namespace InstrumentShop.DataAccessLayer
         public virtual IEnumerable ListNames()
         {
             var query = from instrument in All
-                        select new { instrument.ID, instrument.CategoryID, instrument.Description, instrument.Condition, instrument.PricePerItem };
+                        select new { instrument.ID, instrument.CategoryID, instrument.LastModified, instrument.Description, instrument.Condition, instrument.PricePerItem };
             return query.ToList();
         }
     }

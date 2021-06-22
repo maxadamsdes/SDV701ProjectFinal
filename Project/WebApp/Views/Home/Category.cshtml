@@ -2,6 +2,9 @@
 @{
     ViewBag.Title = "Category | " + Model.Category.Description;
 }
+@functions{
+
+}
 <h1>@Model.Title</h1>
 <h2>@Model.Category.Description</h2>
 <h3>Instruments</h3>
@@ -29,26 +32,36 @@
     <tbody>
         @foreach (var instrument in Model.Category.Instruments)
         {
-        <tr>
-            <td>@instrument.Description</td>
-            <td>@instrument.PricePerItem.ToString("C")</td>
-            <td>@instrument.Condition</td>
-            <td>@instrument.QuantityLeft.ToString()</td>
-            @switch (instrument.CategoryID)
-            {
-                case 1:
-                    <td>@($"{instrument.Tuning}")</td>
-                    break;
-                case 2:
-                    <td>@($"{instrument.NumberOfStrings}")</td>
-                    break;
-                case 3:
-                    <td>@($"{instrument.Mouthpiece}")</td>
-                    break;
-            }
-            <td class="btn btn-default" type="button" id="orderButton" value=@instrument.ID onclick=OrderButton>Order</td>
-        </tr>
+            <tr>
+                <td>@instrument.Description</td>
+                <td>@instrument.PricePerItem.ToString("C")</td>
+                <td>@instrument.Condition</td>
+                <td>@instrument.QuantityLeft.ToString()</td>
+                @switch (instrument.CategoryID)
+                {
+                    case 1:
+                        <td>@($"{instrument.Tuning}")</td>
+                        break;
+                    case 2:
+                        <td>@($"{instrument.NumberOfStrings}")</td>
+                        break;
+                    case 3:
+                        <td>@($"{instrument.Mouthpiece}")</td>
+                        break;
+                }
+                <td><button class="btn btn-default" type="button" id="orderButton" value=@instrument.ID Onclick="OrderButton()">Order</button></td>
+            </tr>
         }
     </tbody>
 </table>
+@section Scripts
+{
+    <script>
+        function OrderButton() {
+            $.get("/Home/OrderButton", function (data) {
+                $()
+            })
+        }
 
+    </script>
+}

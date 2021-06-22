@@ -1,0 +1,20 @@
+﻿INSERT INTO Instrument(CategoryID,Description,PricePerItem,LastModified,QuantityLeft,Condition,Tuning,NumberOfStrings,Mouthpiece)
+VALUES 
+(1, 'Trumpet Bach MODEL C190SL229', 600, 'Jun 16 2021  3:48PM', 3, 'Used', 'C', NULL, NULL),
+(1, 'Trumpet Bach MODEL 18043', 1800, 'Jun 16 2021  3:48PM', 9, 'New', 'Bb', NULL, NULL),
+(1, 'Trumpet Yamaha YTR-9445NYS-YM', 1200, 'Jun 16 2021  3:48PM', 2, 'New', 'C', NULL, NULL),
+(1, 'Trumpet Yamaha YTR-8445', 800, 'Jun 16 2021  3:48PM', 1, 'Used', 'C', NULL, NULL),
+(1, 'Trumpet Schlike C3HD', 1000, 'Jun 16 2021  3:48PM', 4, 'Used', 'C', NULL, NULL),
+(1, 'Trumpet Schlike G1L-4', 1800, 'Jun 16 2021  3:48PM', 1, 'New', 'G', NULL, NULL),
+(1, 'Trumpet Schlike E3L', 1600, 'Jun 16 2021  3:48PM', 1, 'New', 'Eb & D', NULL, NULL),
+(2, 'Viola Forenza Prima 2 Viola Outfit', 377.99, 'Jun 16 2021  3:48PM', 0, 'Used', NULL, '4', NULL),
+(2, 'Viola EPIPHONE™ - VINTAGE SUNBURST', 799, 'Jun 16 2021  3:48PM', 0, 'New', NULL, '4', NULL),
+(2, 'Violin CREMONA SV1340', 1800, 'Jun 16 2021  3:48PM', 8, 'Used', NULL, '4', NULL),
+(2, 'Cello Tremor Stentor Conservatoire Cello', 2295, 'Jun 16 2021  3:48PM', 0, 'New', NULL, '4', NULL),
+(2, 'Acoustic Guitar TAKAMINE GD11MNS', 399, 'Jun 16 2021  3:48PM', 5, 'Used', NULL, '6', NULL),
+(2, 'Electric Guitar E-II ECLIPSE-7 - BLACK SATIN', 2200, 'Jun 16 2021  3:48PM', 2, 'Used', NULL, '6', NULL),
+(3, 'Saxophone ANTIGUA AS4348CU-GH PRO MODEL', 3695, 'Jun 16 2021  3:48PM', 7, 'Used', NULL, NULL, 'Reed'),
+(3, 'Flute ALTUS 1107SRBE0S FLUTE .958', 4599, 'Jun 16 2021  3:48PM', 1, 'Used', NULL, NULL, 'Open Hole'),
+(3, 'Saxophone YANAGISAWA A-WO33', 9695, 'Jun 16 2021  3:48PM', 0, 'New', NULL, NULL, 'Reed'),
+(3, 'Clarinet BUFFET BC1102C-2-0 E13', 3395, 'Jun 16 2021  3:48PM', 4, 'New', NULL, NULL, 'Reed'),
+(3, 'Recorder HOHNER B9509', 2200, 'Jun 16 2021  3:48PM', 0, 'Used', NULL, NULL, 'Plastic');

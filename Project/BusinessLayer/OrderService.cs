@@ -2,7 +2,6 @@
 using AutoMapper;
 using System.Collections;
 using System.Collections.Generic;
-using NUnit.Framework;
 
 namespace InstrumentShop.BusinessLayer
 {

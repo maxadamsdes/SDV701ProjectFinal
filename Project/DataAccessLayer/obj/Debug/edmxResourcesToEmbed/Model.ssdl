@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Shop_DataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="ModelContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Category">
     <Key>
       <PropertyRef Name="ID" />
@@ -15,7 +15,7 @@
     <Property Name="CategoryID" Type="int" Nullable="false" />
     <Property Name="Description" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="PricePerItem" Type="decimal" Precision="10" Scale="2" />
-    <Property Name="LastModified" Type="datetime" Nullable="false" />
+    <Property Name="LastModified" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="QuantityLeft" Type="int" />
     <Property Name="Condition" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="Tuning" Type="nvarchar" MaxLength="20" />
@@ -28,8 +28,8 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ItemID" Type="int" Nullable="false" />
-    <Property Name="Quantity" Type="int" Nullable="false" />
-    <Property Name="PriceTotal" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="PriceTotal" Type="decimal" Precision="18" Scale="0" />
   </EntityType>
   <Association Name="FK_Instrument_Category">
     <End Role="Category" Type="Self.Category" Multiplicity="1" />
@@ -55,7 +55,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="Shop_DataModelStoreContainer">
+  <EntityContainer Name="ModelContextStoreContainer">
     <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Instrument" EntityType="Self.Instrument" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />

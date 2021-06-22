@@ -49,7 +49,7 @@ namespace InstrumentShop.WinForm
             conditionText.Text = _instrument.Condition;
             quantityText.Text = _instrument.QuantityLeft.ToString();
             valueText.Text = _instrument.PricePerItem.ToString();
-            lastModified.Value = _instrument.LastModified;
+            //lastModified.Value = Convert.ToDateTime(_instrument.LastModified);
         }
 
         protected virtual void PushData()
@@ -59,7 +59,7 @@ namespace InstrumentShop.WinForm
                 _instrument.Description = descriptionText.Text;
                 _instrument.Condition = conditionText.Text;
                 _instrument.QuantityLeft = int.Parse(quantityText.Text);
-                _instrument.LastModified = DateTime.Now;
+                //_instrument.LastModified = DateTime.Now.ToString();
                 _instrument.PricePerItem = decimal.Parse(valueText.Text);
             }
             catch

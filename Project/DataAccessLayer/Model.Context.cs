@@ -14,7 +14,7 @@ namespace InstrumentShop.DataAccessLayer
     using System.Data.Entity.Infrastructure;
     
     public partial class ModelContext : DbContext
-    { 
+    {
         internal class FixEFProviderServices
         {
             private void Fix()
@@ -34,6 +34,6 @@ namespace InstrumentShop.DataAccessLayer
     
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Instrument> Instruments { get; set; }
-        public virtual DbSet<Order> Order { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
     }
 }

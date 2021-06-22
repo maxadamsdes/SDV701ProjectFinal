@@ -2,10 +2,7 @@
 using InstrumentShop.DataAccessLayer;
 using InstrumentShop.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text.RegularExpressions;
-using System.Web;
 using System.Web.Mvc;
 using WebApp.Models;
 
@@ -67,7 +64,7 @@ namespace WebApp.Controllers
             return text;
         }
 
-        public Action OrderButton(int id)
+        public Instrument OrderButton(int id)
         {
             Instrument instrument = _unitOfInstrument.InstrumentRepository.Get(id);
             if (instrument.QuantityLeft > 0)
@@ -80,14 +77,9 @@ namespace WebApp.Controllers
                 _orderService.Add(order);
                 instrument.QuantityLeft -= order.Quantity;
                 _unitOfInstrument.InstrumentRepository.Update(instrument);
+            }
 
-                return null;
-            }
-            else
-            {
-                return null;
-            }
-            
+            return instrument;            
         }
     }
 }

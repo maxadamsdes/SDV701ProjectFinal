@@ -1,5 +1,3 @@
-using InstrumentShop.Models;
-
 namespace InstrumentShop.WinForm
 {
     public sealed partial class WoodwindForm : InstrumentForm

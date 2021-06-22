@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Shop_DataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="ModelContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Category">
           <Key>
             <PropertyRef Name="ID" />
@@ -20,7 +20,7 @@
           <Property Name="CategoryID" Type="int" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="PricePerItem" Type="decimal" Precision="10" Scale="2" />
-          <Property Name="LastModified" Type="datetime" Nullable="false" />
+          <Property Name="LastModified" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="QuantityLeft" Type="int" />
           <Property Name="Condition" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Tuning" Type="nvarchar" MaxLength="20" />
@@ -33,8 +33,8 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ItemID" Type="int" Nullable="false" />
-          <Property Name="Quantity" Type="int" Nullable="false" />
-          <Property Name="PriceTotal" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="PriceTotal" Type="decimal" Precision="18" Scale="0" />
         </EntityType>
         <Association Name="FK_Instrument_Category">
           <End Role="Category" Type="Self.Category" Multiplicity="1" />
@@ -60,7 +60,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Shop_DataModelStoreContainer">
+        <EntityContainer Name="ModelContextStoreContainer">
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Instrument" EntityType="Self.Instrument" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
@@ -77,7 +77,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Shop_DataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="ModelContext" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Category">
           <Key>
             <PropertyRef Name="ID" />
@@ -94,14 +94,14 @@
           <Property Name="CategoryID" Type="Int32" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="PricePerItem" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="LastModified" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastModified" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="QuantityLeft" Type="Int32" />
           <Property Name="Condition" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Tuning" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="NumberOfStrings" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Mouthpiece" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Category" Relationship="Self.FK_Instrument_Category" FromRole="Instrument" ToRole="Category" />
-          <NavigationProperty Name="Order" Relationship="Self.FK_Order_Instrument" FromRole="Instrument" ToRole="Order" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK_Order_Instrument" FromRole="Instrument" ToRole="Order" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -109,8 +109,8 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ItemID" Type="Int32" Nullable="false" />
-          <Property Name="Quantity" Type="Int32" Nullable="false" />
-          <Property Name="PriceTotal" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="PriceTotal" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="Instrument" Relationship="Self.FK_Order_Instrument" FromRole="Order" ToRole="Instrument" />
         </EntityType>
         <Association Name="FK_Instrument_Category">
@@ -140,14 +140,14 @@
         <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Categories" EntityType="Self.Category" />
           <EntitySet Name="Instruments" EntityType="Self.Instrument" />
-          <EntitySet Name="Order" EntityType="Self.Order" />
+          <EntitySet Name="Orders" EntityType="Self.Order" />
           <AssociationSet Name="FK_Instrument_Category" Association="Self.FK_Instrument_Category">
             <End Role="Category" EntitySet="Categories" />
             <End Role="Instrument" EntitySet="Instruments" />
           </AssociationSet>
           <AssociationSet Name="FK_Order_Instrument" Association="Self.FK_Order_Instrument">
             <End Role="Instrument" EntitySet="Instruments" />
-            <End Role="Order" EntitySet="Order" />
+            <End Role="Order" EntitySet="Orders" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -155,9 +155,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Shop_DataModelStoreContainer" CdmEntityContainer="Entities">
+        <EntityContainerMapping StorageEntityContainer="ModelContextStoreContainer" CdmEntityContainer="Entities">
           <EntitySetMapping Name="Categories">
-            <EntityTypeMapping TypeName="Shop_DataModel.Category">
+            <EntityTypeMapping TypeName="ModelContext.Category">
               <MappingFragment StoreEntitySet="Category">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
@@ -165,7 +165,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Instruments">
-            <EntityTypeMapping TypeName="Shop_DataModel.Instrument">
+            <EntityTypeMapping TypeName="ModelContext.Instrument">
               <MappingFragment StoreEntitySet="Instrument">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
@@ -180,8 +180,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Order">
-            <EntityTypeMapping TypeName="Shop_DataModel.Order">
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="ModelContext.Order">
               <MappingFragment StoreEntitySet="Order">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ItemID" ColumnName="ItemID" />

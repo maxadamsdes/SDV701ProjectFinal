@@ -1,5 +1,4 @@
 ﻿using InstrumentShop.Models;
-using System.Collections.Generic;
 
 namespace WebApp.Models
 {
