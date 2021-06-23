@@ -55,7 +55,7 @@ namespace InstrumentShop.DataAccessLayer
         public virtual IEnumerable ListNames()
         {
             var query = from order in All
-                        select new { order.ID, order.ItemID, order.Quantity, order.PriceTotal };
+                        select new { order.ID, order.CustomerName, order.PhoneNumber, order.ItemID, order.Quantity, order.PriceTotal, order.Status };
             return query.ToList();
         }
     }

@@ -28,6 +28,9 @@
     <EntitySetMapping Name="Orders">
       <EntityTypeMapping TypeName="ModelContext.Order">
         <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="ItemID" ColumnName="ItemID" />
           <ScalarProperty Name="Quantity" ColumnName="Quantity" />

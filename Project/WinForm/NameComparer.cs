@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace InstrumentShop.WinForm
 {
-    public class NameComparer : IComparer<InstrumentListitemModel>
+    public class NameComparer : IComparer<InstrumentModel>
     {
         private static readonly NameComparer _instance = new NameComparer();
-        public int Compare(InstrumentListitemModel x, InstrumentListitemModel y)
+        public int Compare(InstrumentModel x, InstrumentModel y)
         {
             string nameX = x.Description;
             string nameY = y.Description;

@@ -12,11 +12,14 @@ namespace WebApp.Controllers
     {
         private readonly IUnitOfInstrument _unitOfInstrument;
         private readonly ICategoryService _categoryService;
+        private readonly IInstrumentService _instrumentService;
         private readonly IOrderService _orderService;
+        private InstrumentModel instrument;
         public HomeController()
         {
             _unitOfInstrument = new UnitOfInstrument();
             _categoryService = new CategoryService(_unitOfInstrument);
+            _instrumentService = new InstrumentService(_unitOfInstrument);
             _orderService = new OrderService(_unitOfInstrument);
         }
 
@@ -55,6 +58,42 @@ namespace WebApp.Controllers
             return View(model);
         }
 
+        [HttpGet]
+        public ActionResult Order(int instrumentID)
+        {
+            var model = new OrderViewModel
+            {
+                Title = "Instrument Shop",
+                NewOrder = new OrderModel(),
+                Quantity = 1,
+                Instrument = _instrumentService.Get(instrumentID),
+            };
+            model.NewOrder.ItemID = instrumentID;
+            model.NewOrder.Status = 1;
+            model.NewOrder.PriceTotal = model.Instrument.PricePerItem;
+            model.NewOrder.Quantity = 1;
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Order(OrderModel order)
+        {
+            Console.WriteLine(order.ItemID);
+            instrument = _instrumentService.Get(order.ItemID);
+
+            if (order.Quantity <= instrument.QuantityLeft)
+            {
+                order.PriceTotal = order.PriceTotal * order.Quantity;
+                _orderService.Add(order);
+                _unitOfInstrument.Save();
+                return Redirect("/");
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         private string Sanitize(string text)
         {
             if (text != null)
@@ -64,22 +103,25 @@ namespace WebApp.Controllers
             return text;
         }
 
-        public Instrument OrderButton(int id)
-        {
-            Instrument instrument = _unitOfInstrument.InstrumentRepository.Get(id);
-            if (instrument.QuantityLeft > 0)
-            {
-                OrderModel order = new OrderModel();
-                order.ID = Guid.NewGuid().GetHashCode();
-                order.ItemID = id;
-                order.Quantity = 1;
-                order.PriceTotal = instrument.PricePerItem;
-                _orderService.Add(order);
-                instrument.QuantityLeft -= order.Quantity;
-                _unitOfInstrument.InstrumentRepository.Update(instrument);
-            }
+       
 
-            return instrument;            
-        }
+        //public ActionResult OrderButton(int id)
+        //{
+        //    Instrument instrument = _unitOfInstrument.InstrumentRepository.Get(id);
+        //    if (instrument.QuantityLeft > 0)
+        //    {
+        //        OrderModel order = new OrderModel();
+        //        order.ID = Guid.NewGuid().GetHashCode();
+        //        order.ItemID = id;
+        //        order.Quantity = 1;
+        //        order.PriceTotal = instrument.PricePerItem;
+        //        order.Status = 1;
+        //        _orderService.Add(order);
+        //        instrument.QuantityLeft -= order.Quantity;
+        //        _unitOfInstrument.InstrumentRepository.Update(instrument);
+        //    }
+
+        //    return Models(instrument);            
+        //}
     }
 }

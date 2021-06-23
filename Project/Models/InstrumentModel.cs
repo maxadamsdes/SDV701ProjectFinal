@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace InstrumentShop.Models
 {
-    public class InstrumentListitemModel
+    public class InstrumentModel
     {
         public int ID { get; set; }
         public int CategoryID { get; set; }
@@ -22,7 +22,6 @@ namespace InstrumentShop.Models
         public string Condition { get; set; }
         [StringLength(20)]
         public string Tuning { get; set; }
-        [StringLength(20)]
         public int NumberOfStrings { get; set; }
         [StringLength(20)]
         public string Mouthpiece { get; set; }

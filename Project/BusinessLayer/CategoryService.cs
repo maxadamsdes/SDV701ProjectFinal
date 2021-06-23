@@ -50,7 +50,7 @@ namespace InstrumentShop.BusinessLayer
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Category, CategoryModel>();
-                cfg.CreateMap<Instrument, InstrumentListitemModel>();
+                cfg.CreateMap<Instrument, InstrumentModel>();
             });
             IMapper mapper = new Mapper(config);
             var data = new CategoryModel();
@@ -64,7 +64,7 @@ namespace InstrumentShop.BusinessLayer
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Category, CategoryModel>();
-                cfg.CreateMap<Instrument, InstrumentListitemModel>();
+                cfg.CreateMap<Instrument, InstrumentModel>();
 
             });
             IMapper mapper = new Mapper(config);
@@ -78,7 +78,7 @@ namespace InstrumentShop.BusinessLayer
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Category, CategoryModel>();
-                cfg.CreateMap<Instrument, InstrumentListitemModel>();
+                cfg.CreateMap<Instrument, InstrumentModel>();
 
             });
             IMapper mapper = new Mapper(config);

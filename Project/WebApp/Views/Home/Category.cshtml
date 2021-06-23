@@ -49,19 +49,9 @@
                         <td>@($"{instrument.Mouthpiece}")</td>
                         break;
                 }
-                <td><button class="btn btn-default" type="button" id="orderButton" value=@instrument.ID Onclick="OrderButton()">Order</button></td>
+            <td>@Html.ActionLink("Order", "Order", new { instrumentId = instrument.ID }, new { @class = "btn btn-primary", @style = "color:white" })
+                @*<a href="@Html.ActionLink(category.Description, "Order", "Home", new { id = category.ID }, null)"></a><button class="btn btn-default" type="button" id="orderButton" value=@instrument.ID Onclick="OrderButton()">Order</button>*@</td>
             </tr>
         }
     </tbody>
 </table>
-@section Scripts
-{
-    <script>
-        function OrderButton() {
-            $.get("/Home/OrderButton", function (data) {
-                $()
-            })
-        }
-
-    </script>
-}

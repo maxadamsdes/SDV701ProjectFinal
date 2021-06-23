@@ -34,6 +34,9 @@
     <Property Name="Quantity" Type="Int32" />
     <Property Name="PriceTotal" Type="Decimal" Precision="18" Scale="0" />
     <NavigationProperty Name="Instrument" Relationship="Self.FK_Order_Instrument" FromRole="Order" ToRole="Instrument" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <Association Name="FK_Instrument_Category">
     <End Role="Category" Type="Self.Category" Multiplicity="1" />

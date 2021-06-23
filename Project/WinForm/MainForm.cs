@@ -80,7 +80,6 @@ namespace InstrumentShop.WinForm
         {
             OrderForm orderForm = new OrderForm();
             orderForm.GetOrders();
-            Console.WriteLine(categoryID.Value);
             orderForm.Show();
             orderForm.Activate();
         }

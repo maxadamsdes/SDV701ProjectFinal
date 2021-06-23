@@ -48,12 +48,12 @@ namespace InstrumentShop.RestApiClient
                 return JsonConvert.DeserializeObject<List<CategoryModel>>(result);
             }
         }
-        public async static Task<IList<InstrumentListitemModel>> ListInstrumentsAsync()
+        public async static Task<IList<InstrumentModel>> ListInstrumentsAsync()
         {
             using (HttpClient httpClient = new HttpClient())
             {
                 string result = await httpClient.GetStringAsync($"{Url}/api/instrument/list");
-                return JsonConvert.DeserializeObject<List<InstrumentListitemModel>>(result);
+                return JsonConvert.DeserializeObject<List<InstrumentModel>>(result);
             }
         }
         public async static Task<IList<OrderModel>> ListOrdersAsync()
@@ -72,11 +72,11 @@ namespace InstrumentShop.RestApiClient
                 return JsonConvert.DeserializeObject<CategoryModel>(await httpClient.GetStringAsync($"{Url}/api/category/get?id=" + id));
             }
         }
-        public async static Task<InstrumentListitemModel> GetInstrumentAsync(int? id)
+        public async static Task<InstrumentModel> GetInstrumentAsync(int? id)
         {
             using (HttpClient httpClient = new HttpClient())
             {
-                return JsonConvert.DeserializeObject<InstrumentListitemModel>(await httpClient.GetStringAsync($"{Url}/api/instrument/get?id=" + id));
+                return JsonConvert.DeserializeObject<InstrumentModel>(await httpClient.GetStringAsync($"{Url}/api/instrument/get?id=" + id));
             }
         }
         public async static Task<OrderModel> GetOrderAsync(int? id)
@@ -94,13 +94,14 @@ namespace InstrumentShop.RestApiClient
             {
                 HttpResponseMessage responseMessage = await httpClient.SendAsync(requestMessage);
                 responseMessage.EnsureSuccessStatusCode();
-                return await responseMessage.Content.ReadAsStringAsync();
+                var text =  await responseMessage.Content.ReadAsStringAsync();
+                return text;
                 //responseMessage.EnsureSuccessStatusCode();
                 //return Convert.ToInt32(await responseMessage.Content.ReadAsStringAsync());
             }
         }
 
-        public async static Task<string> AddInstrumentAsync(InstrumentListitemModel instrument)
+        public async static Task<string> AddInstrumentAsync(InstrumentModel instrument)
         {
             return await InsertOrUpdateAsync(instrument, $"{Url}/api/instrument/add", "POST");
         }
@@ -114,7 +115,7 @@ namespace InstrumentShop.RestApiClient
         {
             return await InsertOrUpdateAsync(category, $"{Url}/api/category/update", "PUT");
         }
-        public async static Task<string> UpdateInstrumentAsync(InstrumentListitemModel instrument)
+        public async static Task<string> UpdateInstrumentAsync(InstrumentModel instrument)
         {
             return await InsertOrUpdateAsync(instrument, $"{Url}/api/instrument/update", "PUT");
         }

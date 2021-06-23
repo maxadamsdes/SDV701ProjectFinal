@@ -25,8 +25,7 @@ namespace InstrumentShop.BusinessLayer
 
         public int Update(Models.OrderModel order)
         {
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<Models.OrderModel, Order>()
-            .ForMember(x => x, opt => opt.Ignore()));
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<Models.OrderModel, Order>());
             IMapper mapper = new Mapper(config);
             var data = _unitOfInstrument.OrderRepository.Get(order.ID);
             mapper.Map(order, data);

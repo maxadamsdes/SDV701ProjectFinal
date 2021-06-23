@@ -7,7 +7,7 @@ namespace InstrumentShop.WinForm
 {
     public partial class InstrumentForm : Form
     {
-        protected InstrumentListitemModel _instrument;
+        protected InstrumentModel _instrument;
         protected InstrumentForm _instrumentForm;
         private bool NewInstrument;
 
@@ -35,7 +35,7 @@ namespace InstrumentShop.WinForm
                     case 3: instrumentForm = new WoodwindForm(); break;
                 }
                 instrumentForm.NewInstrument = true;
-                instrumentForm._instrument = new InstrumentListitemModel();
+                instrumentForm._instrument = new InstrumentModel();
                 instrumentForm._instrument.CategoryID = CategoryForm.Category.ID;
                 instrumentForm._instrument.ID = 500;
                 instrumentForm.Show();
@@ -49,7 +49,7 @@ namespace InstrumentShop.WinForm
             conditionText.Text = _instrument.Condition;
             quantityText.Text = _instrument.QuantityLeft.ToString();
             valueText.Text = _instrument.PricePerItem.ToString();
-            //lastModified.Value = Convert.ToDateTime(_instrument.LastModified);
+            lastModified.Value = Convert.ToDateTime(_instrument.LastModified);
         }
 
         protected virtual void PushData()
@@ -59,14 +59,16 @@ namespace InstrumentShop.WinForm
                 _instrument.Description = descriptionText.Text;
                 _instrument.Condition = conditionText.Text;
                 _instrument.QuantityLeft = int.Parse(quantityText.Text);
-                //_instrument.LastModified = DateTime.Now.ToString();
+                _instrument.LastModified = DateTime.Now.ToString();
                 _instrument.PricePerItem = decimal.Parse(valueText.Text);
             }
             catch
             {
                 MessageBox.Show("Some of the data you have entered is incorrect. Please try again", "Alert");
+                
             }
         }
+
         private async void GetInstrument(int? instrumentID)
         {
             if (instrumentID.HasValue)
@@ -95,58 +97,55 @@ namespace InstrumentShop.WinForm
         {
             if (isValid())
             {
-                PushData();
-                try
+                if (NewInstrument)
                 {
+                    await RestClient.AddInstrumentAsync(_instrument);
+                    MessageBox.Show("Instrument Added!", "Success");
 
-                    if (NewInstrument)
-                    {
-                        await RestClient.AddInstrumentAsync(_instrument);
-                        MessageBox.Show("Instrument Added!", "Success");
-                        MainForm.Instance.UpdateDisplay();
-                        NewInstrument = false;
-                    }
-                    else
-                    {
-                        await RestClient.UpdateInstrumentAsync(_instrument);
-                    }
                 }
-
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    await RestClient.UpdateInstrumentAsync(_instrument);
                 }
+                CategoryForm.Run(_instrument.CategoryID);
+                NewInstrument = false;
                 Close();
             }
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
+            CategoryForm.Run(_instrument.CategoryID);
             Close();
         }
 
         public virtual bool isValid()
         {
-            return true;
-        }
-
-        
-
-        
-
-        public void AddInstrument(int choice)
-        {
-            _instrumentForm = new InstrumentForm();
-            switch (choice)
+            try
             {
-                case 1: _instrumentForm = new BrassForm(); break;
-                case 2: _instrumentForm = new StringsForm(); break;
-                case 3: _instrumentForm = new WoodwindForm(); break;
+                _instrument.Description = descriptionText.Text;
+                _instrument.Condition = conditionText.Text;
+                _instrument.QuantityLeft = int.Parse(quantityText.Text);
+                _instrument.LastModified = DateTime.Now.ToString();
+                _instrument.PricePerItem = decimal.Parse(valueText.Text);
+                return true;
             }
-
+            catch
+            {
+                MessageBox.Show("Some of the data you have entered is incorrect. Please try again", "Alert");
+                return false;
+            }
+            
         }
-
-        
-
+        //public void AddInstrument(int choice)
+        //{
+        //    _instrumentForm = new InstrumentForm();
+        //    switch (choice)
+        //    {
+        //        case 1: _instrumentForm = new BrassForm(); break;
+        //        case 2: _instrumentForm = new StringsForm(); break;
+        //        case 3: _instrumentForm = new WoodwindForm(); break;
+        //    }
+        //}
     }
 }

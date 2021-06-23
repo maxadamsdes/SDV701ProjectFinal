@@ -2,10 +2,11 @@
 using AutoMapper;
 using System.Collections.Generic;
 using System.Collections;
+using InstrumentShop.Models;
 
 namespace InstrumentShop.BusinessLayer
 {
-    public class InstrumentService
+    public class InstrumentService : IInstrumentService
     {
         private readonly IUnitOfInstrument _unitOfInstrument;
         public InstrumentService(IUnitOfInstrument unitOfInstrument)
@@ -13,9 +14,9 @@ namespace InstrumentShop.BusinessLayer
             _unitOfInstrument = unitOfInstrument;
         }
 
-        public int Add(Models.InstrumentListitemModel instrument)
+        public int Add(Models.InstrumentModel instrument)
         {
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<Models.InstrumentListitemModel, Instrument>()
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<Models.InstrumentModel, Instrument>()
             .ForMember(x => x.Category, opt => opt.Ignore()));
             IMapper mapper = new Mapper(config);
             var data = new Instrument();
@@ -25,9 +26,9 @@ namespace InstrumentShop.BusinessLayer
             return data.ID;
         }
 
-        public int Update(Models.InstrumentListitemModel instrument)
+        public int Update(InstrumentModel instrument)
         {
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<Models.InstrumentListitemModel, Instrument>()
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<Models.InstrumentModel, Instrument>()
             .ForMember(x => x.Category, opt => opt.Ignore()));
             IMapper mapper = new Mapper(config);
             var data = _unitOfInstrument.InstrumentRepository.Get(instrument.ID);
@@ -36,22 +37,33 @@ namespace InstrumentShop.BusinessLayer
             _unitOfInstrument.Save();
             return data.ID;
         }
+        public InstrumentModel Get(int instrumentID)
+        {
+            var category = _unitOfInstrument.InstrumentRepository.Get(instrumentID);
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Instrument, InstrumentModel>();
+            });
+            IMapper mapper = new Mapper(config);
+            var data = new InstrumentModel();
+            mapper.Map(category, data);
+            return data;
+        }
 
         public void Delete(int id)
         {
             _unitOfInstrument.InstrumentRepository.Delete(id);
             _unitOfInstrument.Save();
         }
-        public IList<Models.InstrumentListitemModel> List()
+        public IList<Models.InstrumentModel> List()
         {
             var instrument = _unitOfInstrument.InstrumentRepository.List();
             var config = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<Instrument, Models.InstrumentListitemModel>();
-                cfg.CreateMap<Instrument, Models.InstrumentListitemModel>();
+                cfg.CreateMap<Instrument, Models.InstrumentModel>();
             });
             IMapper mapper = new Mapper(config);
-            var models = new List<Models.InstrumentListitemModel>();
+            var models = new List<Models.InstrumentModel>();
             mapper.Map(instrument, models);
             return models;
         }
@@ -59,7 +71,5 @@ namespace InstrumentShop.BusinessLayer
         {
             return _unitOfInstrument.InstrumentRepository.ListNames();
         }
-
-
     }
 }

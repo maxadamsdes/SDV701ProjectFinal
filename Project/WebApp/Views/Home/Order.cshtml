@@ -1,0 +1,113 @@
+﻿@model WebApp.Models.OrderViewModel
+@{
+    ViewBag.Title = "Order | " + Model.Instrument.Description;
+}
+@*@{
+        Validation.ReferenceEquals.("customername", "Customer name is required.");
+        Validation.RequireField("phonenumber", "Phone number is required.");
+        Validation.RequireField("quantity", "Quantity is required.");
+        Validation.Add("quantity", Validator.Integer());
+
+        if (IsPost)
+        {
+            var companyname = Request.Form["companyname"];
+            var contactname = Request.Form["contactname"];
+            var employeecount = Request.Form["employees"];
+            if (Validation.IsValid())
+            {
+                <text>
+                    You entered:
+                    <br />
+                    Company Name: @companyname
+                    <br />
+                    Contact Name: @contactname
+                    <br />
+                    Employee Count: @employeecount
+                    <br />
+                </text>
+            }
+        }
+    }*@
+<h1>@Model.Title</h1>
+<hr />
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(m => m.NewOrder.CustomerName)<br />
+        @Html.TextBoxFor(m => m.NewOrder.CustomerName)
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(m => m.NewOrder.PhoneNumber)<br />
+        @Html.TextBoxFor(m => m.NewOrder.PhoneNumber)
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(m => m.NewOrder.Quantity)<br />
+        @Html.TextBoxFor(m => m.NewOrder.Quantity)
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(m => m.NewOrder.ItemID)<br />
+        @Model.NewOrder.ItemID
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(m => m.NewOrder.PriceTotal)<br />
+        @Model.NewOrder.PriceTotal x your quantity.
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(m => m.NewOrder.Status)<br />
+        1
+    </div>
+    <br />
+    <input type="submit" value="NewOrder" />
+}
+
+
+<h2>@Model.Instrument.Description</h2>
+<h3>Instruments</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Description</th>
+            <th scope="col">Price Per Item</th>
+            <th scope="col">Condition</th>
+            <th scope="col">Quanitity Left</th>
+            @switch (@Model.Instrument.CategoryID)
+            {
+                case 1:
+                    <th scope="col">Tuning</th>
+                    break;
+                case 2:
+                    <th scope="col">Number Of Strings</th>
+                    break;
+                case 3:
+                    <th scope="col">Mouthpiece</th>
+                    break;
+            }
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Instrument.Description</td>
+            <td>@Model.Instrument.PricePerItem.ToString("C")</td>
+            <td>@Model.Instrument.Condition</td>
+            <td>@Model.Instrument.QuantityLeft.ToString()</td>
+            @switch (Model.Instrument.CategoryID)
+            {
+                case 1:
+                    <td>@($"{Model.Instrument.Tuning}")</td>
+                    break;
+                case 2:
+                    <td>@($"{Model.Instrument.NumberOfStrings}")</td>
+                    break;
+                case 3:
+                    <td>@($"{Model.Instrument.Mouthpiece}")</td>
+                    break;
+            }
+        </tr>
+    </tbody>
+</table>
+

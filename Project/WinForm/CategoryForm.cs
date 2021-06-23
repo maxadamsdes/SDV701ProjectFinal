@@ -16,10 +16,14 @@ namespace InstrumentShop.WinForm
         public CategoryForm()
         {
             InitializeComponent();
+            if (Category != null)
+            {
+                UpdateDisplay();
+            }
+            
         }
-
-
-        private async void UpdateDisplay()
+        
+        public async void UpdateDisplay()
         {
             Category = await RestClient.GetCategoryAsync(Category.ID);
             instrumentList.DataSource = Category.Instruments;
@@ -59,7 +63,7 @@ namespace InstrumentShop.WinForm
         private decimal GetTotal(CategoryModel category)
         {
             decimal value = 0;
-            foreach(InstrumentListitemModel instrument in category.Instruments)
+            foreach(InstrumentModel instrument in category.Instruments)
             {
                 value += instrument.PricePerItem * instrument.QuantityLeft;
             }
@@ -83,6 +87,7 @@ namespace InstrumentShop.WinForm
             try
             {
                 InstrumentForm.Run(null);
+                Close();
             }
             catch (Exception ex)
             {
@@ -94,6 +99,7 @@ namespace InstrumentShop.WinForm
             try
             {
                 InstrumentForm.Run(instrumentID);
+                Close();
             }
             catch (Exception ex)
             {
@@ -103,9 +109,9 @@ namespace InstrumentShop.WinForm
 
         private void closeButton_Click(object sender, EventArgs e)
         {
-            Close();
             MainForm.Instance.Update();
             MainForm.Instance.Show();
+            Close();
         }
 
         private void byDate_CheckedChanged(object sender, EventArgs e)

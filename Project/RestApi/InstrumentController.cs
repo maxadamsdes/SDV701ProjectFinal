@@ -22,7 +22,7 @@ namespace InstrumentShop.RestApi
         }
 
         [HttpGet]
-        public IEnumerable<InstrumentListitemModel> List()
+        public IEnumerable<InstrumentModel> List()
         {
             using (var unitOfInstrument = new UnitOfInstrument())
             {
@@ -32,7 +32,7 @@ namespace InstrumentShop.RestApi
         }
 
         [HttpGet]
-        public InstrumentListitemModel Get(int id)
+        public InstrumentModel Get(int id)
         {
             using (var unitOfInstrument = new UnitOfInstrument())
             {
@@ -46,7 +46,7 @@ namespace InstrumentShop.RestApi
 
         [HttpPost]
 
-        public int Add(InstrumentListitemModel instrument)
+        public int Add(InstrumentModel instrument)
         {
             Console.WriteLine("How have we got here then...");
             Validate(instrument);
@@ -63,7 +63,7 @@ namespace InstrumentShop.RestApi
         }
 
         [HttpPut]
-        public int Update(InstrumentListitemModel instrument)
+        public int Update(InstrumentModel instrument)
         {
             Validate(instrument);
             if (!ModelState.IsValid)

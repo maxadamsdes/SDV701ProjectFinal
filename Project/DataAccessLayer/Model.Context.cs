@@ -22,6 +22,7 @@ namespace InstrumentShop.DataAccessLayer
                 var instance = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
             }
         }
+
         public ModelContext()
             : base("name=ModelContext")
         {
